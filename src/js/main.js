@@ -724,3 +724,51 @@ if (cookiesPopup && localStorage.getItem("cookiesAccepted") !== "true") {
 } else if (cookiesPopup) {
     cookiesPopup.style.display = "none"; // optional: hide completely
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.direction-card').forEach(card => {
+        const link = card.querySelector('.magnetic-link');
+        let isReverse = false;
+        
+        card.addEventListener('mouseenter', () => {
+            card.classList.add('no-transition');
+            card.style.setProperty('--clip', isReverse ? 'circle(0% at 100% 100%)' : 'circle(0% at 0% 0%)');
+            card.offsetHeight; // force reflow
+            card.classList.remove('no-transition');
+            card.style.setProperty('--clip', isReverse ? 'circle(150% at 100% 100%)' : 'circle(150% at 0% 0%)');
+        });
+        
+        card.addEventListener('mousemove', (e) => {
+            if (!link) return;
+            const rect = card.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            
+            const diffX = e.clientX - centerX;
+            const diffY = e.clientY - centerY;
+            
+            const moveX = diffX * 0.25;
+            const moveY = diffY * 0.25;
+            
+            link.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.classList.add('no-transition');
+            // Instant swap origin to opposite corner
+            card.style.setProperty('--clip', isReverse ? 'circle(150% at 0% 0%)' : 'circle(150% at 100% 100%)');
+            card.offsetHeight; // force reflow
+            card.classList.remove('no-transition');
+            // Shrink to that corner
+            card.style.setProperty('--clip', isReverse ? 'circle(0% at 0% 0%)' : 'circle(0% at 100% 100%)');
+            
+            isReverse = !isReverse;
+            
+            if (link) {
+                // Reset transform smoothly
+                link.style.transform = 'translate(0px, 0px)';
+            }
+        });
+    });
+});
