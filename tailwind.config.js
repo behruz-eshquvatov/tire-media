@@ -2,7 +2,7 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 
 export default {
   content: [
-    './index.html',
+    './*.html',
     './pages/**/*.{html,js}',
     './src/**/*.{js,ts,svelte,vue}',
   ],
@@ -15,7 +15,7 @@ export default {
         '2xl': '104rem'
       },
       maxHeight: {
-        screen: '100dvh', // 👈 добавляем поддержку max-h-screen с 100dvh
+        screen: '100dvh', // Фикс проблемы скролла на iOS с max-h-screen и 100dvh
       },
       screens: {
         ...defaultTheme.screens,

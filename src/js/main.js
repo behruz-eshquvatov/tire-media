@@ -772,3 +772,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Slider next button
+  const sliderContainer = document.getElementById("slider-container");
+  const sliderNext = document.getElementById("slider-next");
+  if (sliderContainer && sliderNext) {
+    sliderNext.addEventListener("click", () => {
+      // If we are at the end of the slider, scroll back to the start
+      if (sliderContainer.scrollLeft + sliderContainer.clientWidth >= sliderContainer.scrollWidth - 10) {
+        sliderContainer.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        // scroll right by one card + gap (approx 350px)
+        sliderContainer.scrollBy({ left: 350, behavior: 'smooth' });
+      }
+    });
+  }
+});

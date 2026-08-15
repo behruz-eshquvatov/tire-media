@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="/Favicon.svg" type="image/x-icon" />
+    <title>Интеграция 1С-Битрикс24</title>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <header class="sticky-header prime-container header">
+      <div>
+        <a href="/index.html">
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="/main-assets/logo-desktop.png"
+            />
+            <img
+              class="header-logo" style="filter: brightness(0)"
+              src="/main-assets/logo-mobile.png"
+              alt="Logo"
+            />
+          </picture>
+        </a>
+      </div>
+      <nav class="menu hidden xl:flex gap-12 items-center">
+          <div class="relative group dropdown-wrapper">
+            <div class="nav-dropdown dropdown-toggle flex items-center gap-1 cursor-pointer">
+              <span>Направления</span>
+              <img
+                src="/main-assets/Arrow%20down.svg"
+                class="duration-300 group-[.open]:rotate-180 w-3 h-3"
+              />
+            </div>
+           <div class="dropdown-content">
+              <a href="bitrix24.html" class="nav-sublink">Внедрение Битрикс24</a>
+              <a href="amocrm.html" class="nav-sublink">Внедрение amoCRM</a>
+              <a href="moysklad.html" class="nav-sublink">Внедрение МойСклад</a>
+              <a href="1c.html" class="nav-sublink">Внедрение 1С</a>
+              <a data-popup="project" class="nav-sublink cursor-pointer">Лицензии Kaspersky</a>
+              <a data-popup="project" class="nav-sublink cursor-pointer">Лицензии Astra Linux</a>
+            </div>
+          </div>
+          <a class="nav-link" href="contacts.html">Контакты</a>
+        </nav>
+      <div class="flex gap-6 items-center">
+        <a href="tel:+70000000000" class="text-20 nav-link">+7 000 000-00-00</a>
+        <button data-popup="project" class="xl:block hidden transparent-btn">
+          Отправить бриф
+        </button>
+      </div>
+    </header>
+    <!-- Mobile Header -->
+    <div class="header-mobile xl:hidden">
+      <button id="menu-toggle" class="text-20 header-btn_menu">
+        <span id="menu-text">Меню</span>
+        <img
+          id="menu-icon"
+          src="/main-assets/Menu.svg"
+          alt="Menu Icon"
+          class="w-6 h-6"
+        />
+      </button>
+      <button data-popup="project" class="text-20 header-btn_mobile">
+        Отправить бриф
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu-wrapper" class="fixed inset-0 z-40 hidden">
+      <div id="menu-overlay" class="overlay opacity-0"></div>
+      <div id="mobile-menu" class="mobile-menu translate-x-full">
+        <nav class="flex flex-col gap-6 p-6">
+          <a href="#tasks" class="nav-link_mobile">Задачи</a>
+          <a href="#stages" class="nav-link_mobile">Этапы</a>
+          <a href="#why-us" class="nav-link_mobile">О нас</a>
+          <a href="#packages" class="nav-link_mobile">Пакеты</a>
+          <a href="#faq" class="nav-link_mobile">FAQ</a>
+          <a href="#contacts" class="nav-link_mobile">Контакты</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Project Popup -->
+    <div id="project-popup-wrapper" class="fixed inset-0 z-50 hidden">
+      <div id="project-overlay" class="overlay opacity-0"></div>
+      <div
+        id="project-popup"
+        class="project-popup transform translate-x-full transition-transform duration-300 ease-in-out"
+      >
+        <div class="flex justify-end mb-2 lg:mb-4">
+          <div
+            id="project-close"
+            class="h-12 w-12 2xl:w-[60px] 2xl:h-[60px] border rounded-full flex items-center justify-center cursor-pointer"
+          >
+            <img class="w-6 h-6 2xl:w-8 2xl:h-8" src="/main-assets/Close.svg" />
+          </div>
+        </div>
+        <form>
+          <p
+            class="2xl:mb-5 font-semibold text-xl mb-3 lg:text-[30px] 2xl:text-[40px]"
+          >
+            Заполните бриф
+          </p>
+          <p class="font-medium leading-[1.4] 2xl:text-20 lg:mb-5 2xl:mb-10">
+            Расскажите о ваших задачах, и мы подготовим коммерческое
+            предложение.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 2xl:gap-8 mb-5">
+            <div>
+              <label class="form-label block mb-2 text-sm lg:text-base"
+                >Название компании</label
+              >
+              <input
+                type="text"
+                placeholder="ООО 'Пример'"
+                class="form-input"
+              />
+            </div>
+            <div>
+              <label class="form-label block mb-2 text-sm lg:text-base"
+                >Контактное лицо</label
+              >
+              <input type="text" placeholder="Иванов Иван" class="form-input" />
+            </div>
+            <div>
+              <label class="form-label block mb-2 text-sm lg:text-base"
+                >Телефон</label
+              >
+              <input
+                type="text"
+                placeholder="+7 (___) ___-__-__"
+                class="form-input"
+              />
+            </div>
+            <div>
+              <label class="form-label block mb-2 text-sm lg:text-base"
+                >Сфера деятельности</label
+              >
+              <input
+                type="text"
+                placeholder="Производство / Услуги / Торговля"
+                class="form-input"
+              />
+            </div>
+            <div class="md:col-span-2">
+              <label class="form-label block mb-2 text-sm lg:text-base"
+                >Количество сотрудников в CRM</label
+              >
+              <select class="form-input bg-white w-full">
+                <option>До 10 человек</option>
+                <option>10 - 50 человек</option>
+                <option>50 - 100 человек</option>
+                <option>Более 100 человек</option>
+              </select>
+            </div>
+            <div class="md:col-span-2">
+              <label class="form-label block mb-2 text-sm lg:text-base"
+                >Какие основные задачи нужно решить?</label
+              >
+              <textarea
+                placeholder="Опишите текущие проблемы и желаемый результат"
+                class="form-input h-[120px] resize-none"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form-checkbox-container mt-2">
+            <input
+              type="checkbox"
+              id="project-consent"
+              class="mt-1 w-5 h-5 lg:w-8 lg:h-8"
+            />
+            <label
+              for="project-consent"
+              class="text-[#A6ABB3] text-sm lg:text-base"
+            >
+              Я даю согласие на обработку персональных данных.
+            </label>
+          </div>
+          <button
+            id="project-submit"
+            type="button"
+            class="black-btn mt-5 w-full md:w-auto"
+            onclick="alert('Бриф успешно отправлен!')"
+          >
+            Отправить бриф
+          </button>
+        </form>
+        <div
+          id="project-popup-error"
+          class="h-screen overflow-hidden -mt-20 hidden justify-center items-center"
+        >
+          <div class="text-center">
+            <p class="lg:mb-5 font-semibold text-xl mb-3 lg:text-[40px]">
+              Что-то пошло не так!
+            </p>
+            <p class="font-medium leading-[1.4] text-20 mb-10">
+              Просим извинения за неудобства. Попробуйте еще раз или вернитесь
+              позже.
+            </p>
+            <button type="submit" class="black-btn">Повторить</button>
+          </div>
+        </div>
+        <div
+          id="project-popup-success"
+          class="h-screen overflow-hidden -mt-20 hidden justify-center items-center"
+        >
+          <div class="text-center">
+            <p class="lg:mb-5 font-semibold text-xl mb-3 lg:text-[40px]">
+              Заявка офомлена успешно!
+            </p>
+            <p class="font-medium leading-[1.4] text-20 mb-10">
+              В ближайшее время наш менеджер свяжется с вами.
+            </p>
+            <button type="submit" class="black-btn">Хорошо</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="">
+      <section class="w-full mt prime-container pt-10 first-screen px-4 lg:px-8 flex flex-col xl:flex-row justify-between items-center gap-10 relative">
+
+        <div class="flex flex-col justify-center w-full xl:w-[60%] relative z-10">
+          <h1 class="font-semibold leading-[1.1] text-4xl md:text-5xl lg:text-6xl 2xl:text-[76px] montserrat mb-6 text-left">
+            Внедрение и настройка<br />
+            <span class="italic font-normal">Битрикс24</span>
+          </h1>
+          <p class="max-w-xl text-lg lg:text-xl font-medium leading-[1.5] text-gray-800 mb-10">
+            Оцифруйте ваши продажи, автоматизируйте бизнес-процессы и объедините команду в едином рабочем пространстве. Мы поможем вам раскрыть весь потенциал Битрикс24 для роста вашего бизнеса.
+          </p>
+          <button class="black-btn w-fit" data-popup="project">
+            Заказать внедрение
+          </button>
+        </div>
+        <div class="w-full xl:w-[40%] flex justify-center xl:justify-end perspective-1000">
+          <img src="/main-assets/bitrix_hero_new.jpg" alt="Битрикс24 Интеграция" class="w-[110%] max-w-lg xl:max-w-2xl 2xl:max-w-3xl object-contain transition-transform duration-200 ease-out" style="will-change: transform;" />
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black text-white text-sm">
+      <div class="prime-container px-4 lg:px-8 pt-10 lg:pt-[100px]">
+        <!-- Middle Section -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12 xl:gap-16 py-10 lg:py-[60px]"
+        >
+          <div class="sm:col-span-2 lg:col-span-2">
+            <a href="#" class="inline-block mb-4">
+              <img
+                src="/main-assets/logo-desktop.png"
+                class="w-[200px] object-contain" style="filter: brightness(0) invert(1);"
+                
+              />
+            </a>
+            <p class="text-[#A6ABB3] text-sm leading-relaxed max-w-[300px]">
+              Мы помогаем бизнесу работать эффективнее, внедряя современные IT-решения и автоматизируя рутину.
+            </p>
+          </div>
+
+          <div>
+            <p class="footer-main-text">Направления</p>
+            <div class="space-y-1 flex flex-col gap-4">
+              <a class="text-20 footer-link font-medium relative w-fit animated-underline" href="bitrix24.html">Внедрение Битрикс24</a>
+              <a class="text-20 footer-link font-medium relative w-fit animated-underline" href="amocrm.html">Внедрение amoCRM</a>
+              <a class="text-20 footer-link font-medium relative w-fit animated-underline" href="moysklad.html">Внедрение МойСклад</a>
+              <a class="text-20 footer-link font-medium relative w-fit animated-underline" href="1c.html">Внедрение 1С</a>
+              <a class="text-20 footer-link font-medium relative w-fit animated-underline cursor-pointer" data-popup="project">Лицензии Kaspersky</a>
+              <a class="text-20 footer-link font-medium relative w-fit animated-underline cursor-pointer" data-popup="project">Лицензии Astra Linux</a>
+            </div>
+          </div>
+          <div>
+            <p class="footer-main-text">Пишите</p>
+            <a class="text-20 footer-link font-medium relative w-fit animated-underline" href="#"
+              >info@faktor.ru</a
+            >
+          </div>
+          <div>
+            <p class="footer-main-text">Звоните</p>
+            <a class="text-20 footer-link font-medium relative w-fit animated-underline" href="#"
+              >+7 000 000-00-00</a
+            >
+          </div>
+          <div>
+            <p class="footer-main-text">Следите за нами</p>
+            <div class="flex space-x-4">
+              <!-- Telegram -->
+              <a
+                href="#"
+                target="_blank"
+                class="group w-12 h-12 lg:w-[78px] lg:h-[78px] border border-white rounded-full p-2 transition duration-300 hover:bg-white flex items-center justify-center"
+              >
+                <svg
+                  class="w-6 h-6 lg:w-8 lg:h-8 text-white transition duration-300 group-hover:text-black"
+                  viewBox="0 0 48 48"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z"
+                  />
+                </svg>
+              </a>
+
+              <!-- VK -->
+              <a
+                href="#"
+                target="_blank"
+                class="group w-12 h-12 lg:w-[78px] lg:h-[78px] border border-white rounded-full p-2 transition duration-300 hover:bg-white flex items-center justify-center"
+              >
+                <svg
+                  class="w-6 h-6 lg:w-8 lg:h-8 text-white transition duration-300 group-hover:text-black"
+                  viewBox="-2.5 0 32 32"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>vk</title>
+                  <path
+                    d="M16.563 15.75c-0.5-0.188-0.5-0.906-0.531-1.406-0.125-1.781 0.5-4.5-0.25-5.656-0.531-0.688-3.094-0.625-4.656-0.531-0.438 0.063-0.969 0.156-1.344 0.344s-0.75 0.5-0.75 0.781c0 0.406 0.938 0.344 1.281 0.875 0.375 0.563 0.375 1.781 0.375 2.781 0 1.156-0.188 2.688-0.656 2.75-0.719 0.031-1.125-0.688-1.5-1.219-0.75-1.031-1.5-2.313-2.063-3.563-0.281-0.656-0.438-1.375-0.844-1.656-0.625-0.438-1.75-0.469-2.844-0.438-1 0.031-2.438-0.094-2.719 0.5-0.219 0.656 0.25 1.281 0.5 1.813 1.281 2.781 2.656 5.219 4.344 7.531 1.563 2.156 3.031 3.875 5.906 4.781 0.813 0.25 4.375 0.969 5.094 0 0.25-0.375 0.188-1.219 0.313-1.844s0.281-1.25 0.875-1.281c0.5-0.031 0.781 0.406 1.094 0.719 0.344 0.344 0.625 0.625 0.875 0.938 0.594 0.594 1.219 1.406 1.969 1.719 1.031 0.438 2.625 0.313 4.125 0.25 1.219-0.031 2.094-0.281 2.188-1 0.063-0.563-0.563-1.375-0.938-1.844-0.938-1.156-1.375-1.5-2.438-2.563-0.469-0.469-1.063-0.969-1.063-1.531-0.031-0.344 0.25-0.656 0.5-1 1.094-1.625 2.188-2.781 3.188-4.469 0.281-0.5 0.938-1.656 0.688-2.219-0.281-0.625-1.844-0.438-2.813-0.438-1.25 0-2.875-0.094-3.188 0.156-0.594 0.406-0.844 1.063-1.125 1.688-0.625 1.438-1.469 2.906-2.344 4-0.313 0.375-0.906 1.156-1.25 1.031z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        
+        <!-- Bottom Section -->
+        <div
+          class="flex flex-col lg:flex-row gap-3 lg:items-center justify-between mt-5 lg:mt-8 pb-10 text-white/50 text-xs"
+        >
+          <p
+            class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3]"
+          >
+            © 2026, Фактор интеграции
+            <span class="ml-2 lg:ml-4">ИП Иванов И.И. ИНН 123456789012</span>
+          </p>
+          <a
+            class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3] relative animated-underline"
+            href="#"
+            >Пользовательское соглашение</a
+          >
+          <a
+            class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3] relative animated-underline"
+            href="#"
+            >Политика конфиденциальности</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="src/js/main.js"></script>
+    <script>
+      document.querySelectorAll(".toggle-trigger").forEach((trigger) => {
+        trigger.addEventListener("click", () => {
+          const content = trigger.nextElementSibling;
+          const btn = trigger.querySelector(".faq-btn");
+          const isOpen = content.classList.contains("is-open");
+
+          if (isOpen) {
+            if (content.style.maxHeight === "none") {
+              content.style.maxHeight = content.scrollHeight + "px";
+              content.offsetHeight;
+            }
+            content.classList.remove("is-open");
+            content.style.maxHeight = "0px";
+            btn.classList.remove("rotate-45");
+          } else {
+            content.classList.add("is-open");
+            content.style.maxHeight = content.scrollHeight + "px";
+            btn.classList.add("rotate-45");
+
+            setTimeout(() => {
+              if (content.classList.contains("is-open")) {
+                content.style.maxHeight = "none";
+              }
+            }, 500);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
