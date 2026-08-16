@@ -9,9 +9,10 @@ export default defineConfig({
         'amocrm': resolve(__dirname, 'amocrm.html'),
         'bitrix24': resolve(__dirname, 'bitrix24.html'),
         'contacts': resolve(__dirname, 'contacts.html'),
+        'kaspersky': resolve(__dirname, 'kaspersky.html'),
+        'astralinux': resolve(__dirname, 'astralinux.html'),
         main: resolve(__dirname, 'index.html'),
         'moysklad': resolve(__dirname, 'moysklad.html'),
-
       }
     }
   }

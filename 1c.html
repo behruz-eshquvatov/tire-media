@@ -21,21 +21,37 @@
         </a>
       </div>
       <nav class="menu hidden xl:flex gap-12 items-center">
-          <div class="relative group dropdown-wrapper">
+                    <div class="relative group dropdown-wrapper">
             <div class="nav-dropdown dropdown-toggle flex items-center gap-1 cursor-pointer">
-              <span>Направления</span>
+              <span>Интеграции</span>
               <img
                 src="/main-assets/Arrow%20down.svg"
                 class="duration-300 group-[.open]:rotate-180 w-3 h-3"
               />
             </div>
            <div class="dropdown-content">
-              <a href="bitrix24.html" class="nav-sublink">Внедрение Битрикс24</a>
-              <a href="amocrm.html" class="nav-sublink">Внедрение amoCRM</a>
-              <a href="moysklad.html" class="nav-sublink">Внедрение МойСклад</a>
-              <a href="1c.html" class="nav-sublink">Внедрение 1С</a>
-              <a data-popup="project" class="nav-sublink cursor-pointer">Лицензии Kaspersky</a>
-              <a data-popup="project" class="nav-sublink cursor-pointer">Лицензии Astra Linux</a>
+              <div class="flex flex-col gap-4">
+                <a href="bitrix24.html" class="nav-sublink">Внедрение Битрикс24</a>
+                <a href="amocrm.html" class="nav-sublink">Внедрение amoCRM</a>
+                <a href="moysklad.html" class="nav-sublink">Внедрение МойСклад</a>
+                <a href="1c.html" class="nav-sublink">Внедрение 1С</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group dropdown-wrapper">
+            <div class="nav-dropdown dropdown-toggle flex items-center gap-1 cursor-pointer">
+              <span>Лицензии</span>
+              <img
+                src="/main-assets/Arrow%20down.svg"
+                class="duration-300 group-[.open]:rotate-180 w-3 h-3"
+              />
+            </div>
+           <div class="dropdown-content">
+              <div class="flex flex-col gap-4">
+                <a href="kaspersky.html" class="nav-sublink cursor-pointer">Лицензии Kaspersky</a>
+                <a href="astralinux.html" class="nav-sublink cursor-pointer">Лицензии Astra Linux</a>
+              </div>
             </div>
           </div>
           <a class="nav-link" href="contacts.html">Контакты</a>
@@ -251,11 +267,11 @@
       </section>
       <!-- Направления -->
       <section id="directions" class="relative py-20 lg:py-[100px] bg-white overflow-hidden group/slider">
-  <img src="/seo-assets/bg-vectors.png" class="absolute inset-0 w-full h-full object-cover object-center z-[0] pointer-events-none" />
+        <img src="/seo-assets/bg-vectors.png" class="absolute inset-0 w-full h-full object-cover object-center z-[0] pointer-events-none" />
 
         <div class="prime-container px-4 lg:px-8 relative">
           <div class="relative mb-12 lg:mb-20">
-            <h2 class="h2-title">Другие направления</h2>
+            <h2 class="h2-title">Направления</h2>
             <p class="xl:indent-[20vw] big-text">
               Выберите подходящее для вас
               <span class="italic font-normal">направление</span> работы.
@@ -263,104 +279,123 @@
           </div>
           
           <div class="relative">
-            <div id="slider-container" class="flex gap-4 lg:gap-8 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory pb-4 -mr-4 lg:-mr-8 pr-4 lg:pr-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
 
-          <div class="shrink-0 w-[320px] lg:w-[400px] direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden snap-start">
-            <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
-              <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
-                <p class="text-2xl lg:text-3xl font-semibold truncate" title="Kaspersky">Kaspersky</p>
-                <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+              <!-- Card 1: Битрикс24 -->
+              <div class="w-full direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden">
+                <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
+                  <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
+                    <p class="text-2xl lg:text-3xl font-semibold truncate" title="Битрикс24">Битрикс24</p>
+                    <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </div>
+                  <p class="opacity-70 text-sm lg:text-base font-medium">Комплексное внедрение CRM, настройка бизнес-процессов и обучение сотрудников.</p>
+                </div>
+                
+                <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100 bg-black">
+                  <a href="bitrix24.html" class="text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer w-full h-full">
+                    Перейти
+                    <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </a>
+                </div>
+                <img src="/main-assets/1c.webp" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale" />
               </div>
-              <p class="opacity-70 text-sm lg:text-base font-medium">Лицензии на продукты Kaspersky. Официальный партнер, реализация лицензий на ПО.</p>
-            </div>
-            
-            <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100">
-              <div data-popup="project" class="magnetic-link text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out cursor-pointer relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80">
-                Заказать
-                <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-              </div>
-            </div>
-          </div>
 
-          <div class="shrink-0 w-[320px] lg:w-[400px] direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden snap-start">
-            <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
-              <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
-                <p class="text-2xl lg:text-3xl font-semibold truncate" title="Astra Linux">Astra Linux</p>
-                <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+              <!-- Card 2: Kaspersky -->
+              <div class="w-full direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden">
+                <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
+                  <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
+                    <p class="text-2xl lg:text-3xl font-semibold truncate" title="Kaspersky">Kaspersky</p>
+                    <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </div>
+                  <p class="opacity-70 text-sm lg:text-base font-medium">Лицензии на продукты Kaspersky. Официальный партнер, реализация лицензий на ПО.</p>
+                </div>
+                <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100 bg-black">
+                  <a href="kaspersky.html" class="text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer w-full h-full">
+                    Перейти
+                    <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </a>
+                </div>
+                <img src="/main-assets/kaspersky_hero.jpg" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale opacity-50" />
               </div>
-              <p class="opacity-70 text-sm lg:text-base font-medium">Лицензии на продукты Astra Linux. Импортозамещение и безопасность.</p>
-            </div>
-            
-            <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100">
-              <div data-popup="project" class="magnetic-link text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out cursor-pointer relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80">
-                Заказать
-                <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-              </div>
-            </div>
-          </div>
 
-          <div class="shrink-0 w-[320px] lg:w-[400px] direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden snap-start">
-            <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
-              <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
-                <p class="text-2xl lg:text-3xl font-semibold truncate" title="1С:Предприятие">1С:Предприятие</p>
-                <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+              <!-- Card 3: Astra Linux -->
+              <div class="w-full direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden">
+                <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
+                  <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
+                    <p class="text-2xl lg:text-3xl font-semibold truncate" title="Astra Linux">Astra Linux</p>
+                    <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </div>
+                  <p class="opacity-70 text-sm lg:text-base font-medium">Официальный партнер по внедрению и лицензированию отечественной операционной системы.</p>
+                </div>
+                <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100 bg-black">
+                  <a href="astralinux.html" class="text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer w-full h-full">
+                    Перейти
+                    <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </a>
+                </div>
+                <img src="/main-assets/astralinux_hero.png" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale opacity-50" />
               </div>
-              <p class="opacity-70 text-sm lg:text-base font-medium">Синхронизация баз данных и настройка обмена с другими системами. (В разработке)</p>
-            </div>
 
-            <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100">
-              <div class="magnetic-link text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer">
-                Перейти
-                <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+              <!-- Card 4: 1С:Предприятие -->
+              <div class="w-full direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden">
+                <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
+                  <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
+                    <p class="text-2xl lg:text-3xl font-semibold truncate" title="1С:Предприятие">1С:Предприятие</p>
+                    <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </div>
+                  <p class="opacity-70 text-sm lg:text-base font-medium">Синхронизация баз данных и настройка обмена с другими системами.</p>
+                </div>
+                <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100 bg-black">
+                  <a href="1c.html" class="text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer w-full h-full">
+                    Перейти
+                    <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </a>
+                </div>
+                <img src="/main-assets/1c_logo.png" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale" />
               </div>
-            </div>
-            <img src="/main-assets/1c.webp" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0  grayscale" />
-          </div>
 
-          <div class="shrink-0 w-[320px] lg:w-[400px] direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden snap-start">
-            <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
-              <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
-                <p class="text-2xl lg:text-3xl font-semibold truncate" title="amoCRM">amoCRM</p>
-                <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+              <!-- Card 5: amoCRM -->
+              <div class="w-full direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden">
+                <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
+                  <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
+                    <p class="text-2xl lg:text-3xl font-semibold truncate" title="amoCRM">amoCRM</p>
+                    <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </div>
+                  <p class="opacity-70 text-sm lg:text-base font-medium">Построение прозрачного отдела продаж и интеграция мессенджеров.</p>
+                </div>
+                <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100 bg-black">
+                  <a href="amocrm.html" class="text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer w-full h-full">
+                    Перейти
+                    <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </a>
+                </div>
+                <img src="/main-assets/amocrm_logo.png" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale" />
               </div>
-              <p class="opacity-70 text-sm lg:text-base font-medium">Построение прозрачного отдела продаж и интеграция мессенджеров. (В разработке)</p>
-            </div>
-            
-            <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100">
-              <div class="magnetic-link text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer">
-                Перейти
-                <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-              </div>
-            </div>
-            <img src="/main-assets/amocrm_logo.png" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale" />
-          </div>
 
-          <div class="shrink-0 w-[320px] lg:w-[400px] direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden snap-start">
-            <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
-              <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
-                <p class="text-2xl lg:text-3xl font-semibold truncate" title="МойСклад">МойСклад</p>
-                <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+              <!-- Card 6: МойСклад -->
+              <div class="w-full direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden">
+                <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
+                  <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
+                    <p class="text-2xl lg:text-3xl font-semibold truncate" title="МойСклад">МойСклад</p>
+                    <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </div>
+                  <p class="opacity-70 text-sm lg:text-base font-medium">Автоматизация складского учета и интеграция с маркетплейсами.</p>
+                </div>
+                <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100 bg-black">
+                  <a href="moysklad.html" class="text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer w-full h-full">
+                    Перейти
+                    <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </a>
+                </div>
+                <img src="/main-assets/moysklad_logo.png" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale" />
               </div>
-              <p class="opacity-70 text-sm lg:text-base font-medium">Автоматизация складского учета и интеграция с маркетплейсами. (В разработке)</p>
-            </div>
-            
-            <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100">
-              <div class="magnetic-link text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer">
-                Перейти
-                <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-              </div>
-            </div>
-            <img src="/main-assets/moysklad_logo.png" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale" />
-          </div>
 
-</div>
-            
-            <button id="slider-next" class="absolute -right-2 lg:right-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 lg:w-16 lg:h-16 bg-white border border-gray-200 rounded-full flex items-center justify-center shadow-lg hover:bg-gray-50 transition-colors opacity-0 group-hover/slider:opacity-100 disabled:opacity-0 cursor-pointer">
-              <svg class="w-6 h-6 lg:w-8 lg:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-            </button>
+            </div>
           </div>
         </div>
       </section>
+
+      
 
       <!-- Задачи -->
       <section
@@ -451,6 +486,73 @@
         
       </section>
 
+      <!-- Why Us Section -->
+      <section id="why-us" class="w-full bg-[#EDEDED] py-20 lg:py-[200px]">
+        <div class="prime-container px-4 lg:px-8">
+          <div class="relative">
+            <h2 class="h2-title">Почему именно мы?</h2>
+            <p class="big-text">
+              Акцент на
+              <span class="italic font-normal">команду.</span> Расставляя
+              правильные акценты можно прийти к нужному результату гораздо
+              быстрее.
+            </p>
+          </div>
+          <div
+            class="mt-5 lg:mt-[100px] grid grid-cols-1 xl:grid-cols-2 gap-x-6 gap-y-10"
+          >
+            <!-- Текст слева -->
+            <aside class="flex items-end order-last lg:order-first">
+              <p class="max-w-[650px] text-20 leading-[1.4] font-medium">
+                В ходе работ мы погрузимся в ваш бизнес, исследуем его сильные и
+                слабые стороны и улучшим маркетинг, чтобы он заработал на 100%.
+                С нас команда, с вас потребность. Совместными усилиями мы
+                достигнем нужного результата за максимально короткий промежуток
+                времени.
+              </p>
+            </aside>
+
+            <!-- Текст и изображения справа -->
+            <aside
+              class="flex order-first xl:order-last flex-col justify-between"
+            >
+              <p
+                class="text-base lg:text-[28px] leading-[1.4] font-medium mb-10 xl:mb-[100px]"
+              >
+                Мы это поняли в начале своего пути, поэтому помогаем расставить
+                акценты и другим бизнесам. У всех они свои. Целью может быть
+                рост знания о бренде, количества заявок, продаж.
+              </p>
+
+              <div class="flex flex-col sm:flex-row gap-5 lg:gap-8">
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  class="w-full sm:w-1/2 lg:h-[520px] h-[400px] group overflow-hidden"
+                >
+                  <img
+                    src="/main-assets/card1.png"
+                    class="h-full w-full object-cover object-center grayscale group-hover:grayscale-0 transition duration-500 ease-in-out"
+                    alt="card1"
+                  />
+                </div>
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="800"
+                  data-aos-delay="100"
+                  class="w-full sm:w-1/2 group lg:h-[520px] h-[400px] overflow-hidden"
+                >
+                  <img
+                    src="/main-assets/card2.png"
+                    class="h-full w-full object-cover object-center grayscale group-hover:grayscale-0 transition duration-500 ease-in-out"
+                    alt="card2"
+                  />
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
       <section
         id="stages"
         class="w-full relative prime-container px-4 lg:px-8 py-[60px] lg:py-[120px]"
@@ -1291,8 +1393,8 @@
               <a class="text-20 footer-link font-medium relative w-fit animated-underline" href="amocrm.html">Внедрение amoCRM</a>
               <a class="text-20 footer-link font-medium relative w-fit animated-underline" href="moysklad.html">Внедрение МойСклад</a>
               <a class="text-20 footer-link font-medium relative w-fit animated-underline" href="1c.html">Внедрение 1С</a>
-              <a class="text-20 footer-link font-medium relative w-fit animated-underline cursor-pointer" data-popup="project">Лицензии Kaspersky</a>
-              <a class="text-20 footer-link font-medium relative w-fit animated-underline cursor-pointer" data-popup="project">Лицензии Astra Linux</a>
+              <a href="kaspersky.html" class="text-20 footer-link font-medium relative w-fit animated-underline cursor-pointer">Лицензии Kaspersky</a>
+              <a href="astralinux.html" class="text-20 footer-link font-medium relative w-fit animated-underline cursor-pointer">Лицензии Astra Linux</a>
             </div>
           </div>
           <div>

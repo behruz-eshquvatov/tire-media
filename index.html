@@ -30,19 +30,35 @@
       <nav class="menu hidden xl:flex gap-12 items-center">
           <div class="relative group dropdown-wrapper">
             <div class="nav-dropdown dropdown-toggle flex items-center gap-1 cursor-pointer">
-              <span>Направления</span>
+              <span>Интеграции</span>
               <img
                 src="/main-assets/Arrow%20down.svg"
                 class="duration-300 group-[.open]:rotate-180 w-3 h-3"
               />
             </div>
            <div class="dropdown-content">
-              <a href="bitrix24.html" class="nav-sublink">Внедрение Битрикс24</a>
-              <a href="amocrm.html" class="nav-sublink">Внедрение amoCRM</a>
-              <a href="moysklad.html" class="nav-sublink">Внедрение МойСклад</a>
-              <a href="1c.html" class="nav-sublink">Внедрение 1С</a>
-              <a data-popup="project" class="nav-sublink cursor-pointer">Лицензии Kaspersky</a>
-              <a data-popup="project" class="nav-sublink cursor-pointer">Лицензии Astra Linux</a>
+              <div class="flex flex-col gap-4">
+                <a href="bitrix24.html" class="nav-sublink">Внедрение Битрикс24</a>
+                <a href="amocrm.html" class="nav-sublink">Внедрение amoCRM</a>
+                <a href="moysklad.html" class="nav-sublink">Внедрение МойСклад</a>
+                <a href="1c.html" class="nav-sublink">Внедрение 1С</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group dropdown-wrapper">
+            <div class="nav-dropdown dropdown-toggle flex items-center gap-1 cursor-pointer">
+              <span>Лицензии</span>
+              <img
+                src="/main-assets/Arrow%20down.svg"
+                class="duration-300 group-[.open]:rotate-180 w-3 h-3"
+              />
+            </div>
+           <div class="dropdown-content">
+              <div class="flex flex-col gap-4">
+                <a href="kaspersky.html" class="nav-sublink cursor-pointer">Лицензии Kaspersky</a>
+                <a href="astralinux.html" class="nav-sublink cursor-pointer">Лицензии Astra Linux</a>
+              </div>
             </div>
           </div>
           <a class="nav-link" href="contacts.html">Контакты</a>
@@ -262,7 +278,7 @@
       </section>
       <!-- Направления -->
       <section id="directions" class="relative py-20 lg:py-[100px] bg-white overflow-hidden group/slider">
-  <img src="/seo-assets/bg-vectors.png" class="absolute inset-0 w-full h-full object-cover object-center z-[0] pointer-events-none" />
+        <img src="/seo-assets/bg-vectors.png" class="absolute inset-0 w-full h-full object-cover object-center z-[0] pointer-events-none" />
 
         <div class="prime-container px-4 lg:px-8 relative">
           <div class="relative mb-12 lg:mb-20">
@@ -274,714 +290,126 @@
           </div>
           
           <div class="relative">
-            <div id="slider-container" class="flex gap-4 lg:gap-8 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory pb-4 -mr-4 lg:-mr-8 pr-4 lg:pr-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
 
-          <div class="shrink-0 w-[320px] lg:w-[400px] direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden snap-start">
-            <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
-              <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
-                <p class="text-2xl lg:text-3xl font-semibold truncate" title="Битрикс24">Битрикс24</p>
-                <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+              <!-- Card 1: Битрикс24 -->
+              <div class="w-full direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden">
+                <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
+                  <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
+                    <p class="text-2xl lg:text-3xl font-semibold truncate" title="Битрикс24">Битрикс24</p>
+                    <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </div>
+                  <p class="opacity-70 text-sm lg:text-base font-medium">Комплексное внедрение CRM, настройка бизнес-процессов и обучение сотрудников.</p>
+                </div>
+                
+                <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100 bg-black">
+                  <a href="bitrix24.html" class="text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer w-full h-full">
+                    Перейти
+                    <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </a>
+                </div>
+                <img src="/main-assets/1c.webp" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale" />
               </div>
-              <p class="opacity-70 text-sm lg:text-base font-medium">Комплексное внедрение CRM, настройка бизнес-процессов и обучение сотрудников.</p>
-            </div>
-            
-            <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100">
-              <a href="bitrix24.html" class="magnetic-link text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer">
-                Перейти
-                <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-              </a>
-            </div>
-            <img src="/main-assets/1c.webp" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale" />
-          </div>
 
+              <!-- Card 2: Kaspersky -->
+              <div class="w-full direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden">
+                <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
+                  <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
+                    <p class="text-2xl lg:text-3xl font-semibold truncate" title="Kaspersky">Kaspersky</p>
+                    <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </div>
+                  <p class="opacity-70 text-sm lg:text-base font-medium">Лицензии на продукты Kaspersky. Официальный партнер, реализация лицензий на ПО.</p>
+                </div>
+                <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100 bg-black">
+                  <a href="kaspersky.html" class="text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer w-full h-full">
+                    Перейти
+                    <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </a>
+                </div>
+                <img src="/main-assets/kaspersky_hero.jpg" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale opacity-50" />
+              </div>
 
-          <div class="shrink-0 w-[320px] lg:w-[400px] direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden snap-start">
-            <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
-              <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
-                <p class="text-2xl lg:text-3xl font-semibold truncate" title="Kaspersky">Kaspersky</p>
-                <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+              <!-- Card 3: Astra Linux -->
+              <div class="w-full direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden">
+                <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
+                  <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
+                    <p class="text-2xl lg:text-3xl font-semibold truncate" title="Astra Linux">Astra Linux</p>
+                    <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </div>
+                  <p class="opacity-70 text-sm lg:text-base font-medium">Официальный партнер по внедрению и лицензированию отечественной операционной системы.</p>
+                </div>
+                <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100 bg-black">
+                  <a href="astralinux.html" class="text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer w-full h-full">
+                    Перейти
+                    <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </a>
+                </div>
+                <img src="/main-assets/astralinux_hero.png" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale opacity-50" />
               </div>
-              <p class="opacity-70 text-sm lg:text-base font-medium">Лицензии на продукты Kaspersky. Официальный партнер, реализация лицензий на ПО.</p>
-            </div>
-            
-            <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100">
-              <div data-popup="project" class="magnetic-link text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out cursor-pointer relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80">
-                Заказать
-                <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-              </div>
-            </div>
-          </div>
 
-          <div class="shrink-0 w-[320px] lg:w-[400px] direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden snap-start">
-            <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
-              <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
-                <p class="text-2xl lg:text-3xl font-semibold truncate" title="Astra Linux">Astra Linux</p>
-                <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+              <!-- Card 4: 1С:Предприятие -->
+              <div class="w-full direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden">
+                <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
+                  <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
+                    <p class="text-2xl lg:text-3xl font-semibold truncate" title="1С:Предприятие">1С:Предприятие</p>
+                    <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </div>
+                  <p class="opacity-70 text-sm lg:text-base font-medium">Синхронизация баз данных и настройка обмена с другими системами.</p>
+                </div>
+                <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100 bg-black">
+                  <a href="1c.html" class="text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer w-full h-full">
+                    Перейти
+                    <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </a>
+                </div>
+                <img src="/main-assets/1c_logo.png" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale" />
               </div>
-              <p class="opacity-70 text-sm lg:text-base font-medium">Лицензии на продукты Astra Linux. Импортозамещение и безопасность.</p>
-            </div>
-            
-            <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100">
-              <div data-popup="project" class="magnetic-link text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out cursor-pointer relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80">
-                Заказать
-                <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-              </div>
-            </div>
-          </div>
 
-          <div class="shrink-0 w-[320px] lg:w-[400px] direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden snap-start">
-            <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
-              <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
-                <p class="text-2xl lg:text-3xl font-semibold truncate" title="1С:Предприятие">1С:Предприятие</p>
-                <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+              <!-- Card 5: amoCRM -->
+              <div class="w-full direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden">
+                <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
+                  <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
+                    <p class="text-2xl lg:text-3xl font-semibold truncate" title="amoCRM">amoCRM</p>
+                    <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </div>
+                  <p class="opacity-70 text-sm lg:text-base font-medium">Построение прозрачного отдела продаж и интеграция мессенджеров.</p>
+                </div>
+                <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100 bg-black">
+                  <a href="amocrm.html" class="text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer w-full h-full">
+                    Перейти
+                    <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </a>
+                </div>
+                <img src="/main-assets/amocrm_logo.png" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale" />
               </div>
-              <p class="opacity-70 text-sm lg:text-base font-medium">Синхронизация баз данных и настройка обмена с другими системами. (В разработке)</p>
-            </div>
 
-            <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100">
-              <div class="magnetic-link text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer">
-                Перейти
-                <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+              <!-- Card 6: МойСклад -->
+              <div class="w-full direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden">
+                <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
+                  <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
+                    <p class="text-2xl lg:text-3xl font-semibold truncate" title="МойСклад">МойСклад</p>
+                    <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </div>
+                  <p class="opacity-70 text-sm lg:text-base font-medium">Автоматизация складского учета и интеграция с маркетплейсами.</p>
+                </div>
+                <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100 bg-black">
+                  <a href="moysklad.html" class="text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer w-full h-full">
+                    Перейти
+                    <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
+                  </a>
+                </div>
+                <img src="/main-assets/moysklad_logo.png" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale" />
               </div>
-            </div>
-            <img src="/main-assets/1c.webp" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0  grayscale" />
-          </div>
 
-          <div class="shrink-0 w-[320px] lg:w-[400px] direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden snap-start">
-            <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
-              <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
-                <p class="text-2xl lg:text-3xl font-semibold truncate" title="amoCRM">amoCRM</p>
-                <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-              </div>
-              <p class="opacity-70 text-sm lg:text-base font-medium">Построение прозрачного отдела продаж и интеграция мессенджеров. (В разработке)</p>
-            </div>
-            
-            <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100">
-              <div class="magnetic-link text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer">
-                Перейти
-                <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-              </div>
-            </div>
-            <img src="/main-assets/amocrm_logo.png" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale" />
-          </div>
-
-          <div class="shrink-0 w-[320px] lg:w-[400px] direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden snap-start">
-            <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
-              <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
-                <p class="text-2xl lg:text-3xl font-semibold truncate" title="МойСклад">МойСклад</p>
-                <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-              </div>
-              <p class="opacity-70 text-sm lg:text-base font-medium">Автоматизация складского учета и интеграция с маркетплейсами. (В разработке)</p>
-            </div>
-            
-            <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100">
-              <div class="magnetic-link text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer">
-                Перейти
-                <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-              </div>
-            </div>
-            <img src="/main-assets/moysklad_logo.png" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale" />
-          </div>
-
-</div>
-            
-            <button id="slider-next" class="absolute -right-2 lg:right-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 lg:w-16 lg:h-16 bg-white border border-gray-200 rounded-full flex items-center justify-center shadow-lg hover:bg-gray-50 transition-colors opacity-0 group-hover/slider:opacity-100 disabled:opacity-0 cursor-pointer">
-              <svg class="w-6 h-6 lg:w-8 lg:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Задачи -->
-      <section
-        id="tasks"
-        class="prime-container relative py-20 lg:py-[200px] overflow-hidden bg-black px-4 lg:px-8"
-      >
-        <p class="text-center indent-0 text-white big-text">
-          Какие задачи решаем
-        </p>
-        <div
-          class="z-10 flex justify-center mt-10 lg:mt-[100px] h-fit flex-col xl:flex-row gap-y-4 relative"
-        >
-          <div
-            data-aos="fade-up"
-            data-aos-duration="600"
-            class="bg-black z-[2] w-full flex flex-col justify-between p-5 lg:p-6 mx-auto max-w-[700px] h-[340px] lg:h-[440px] border border-white/30"
-          >
-            <div
-              class="w-10 h-10 lg:w-[50px] lg:h-[50px] rounded-full bg-[#FFFFFF1F] text-white font-semibold lg:text-[22px] flex justify-center items-center"
-            >
-              1
-            </div>
-            <div>
-              <p class="font-semibold mb-3 lg:text-[22px] text-white">
-                Автоматизация рутины
-              </p>
-              <p
-                class="text-[#696969] font-medium text-sm lg:text-base max-w-sm"
-              >
-                Снимаем рутинные задачи с сотрудников, настраиваем роботов и
-                бизнес-процессы для автоматической работы.
-              </p>
-            </div>
-          </div>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="600"
-            data-aos-delay="250"
-            class="bg-black xl:-mx-20 z-[2] xl:mt-[180px] w-full flex flex-col justify-between p-5 mx-auto lg:p-6 max-w-[700px] h-[340px] lg:h-[440px] border border-white/30"
-          >
-            <div
-              class="w-10 h-10 lg:w-[50px] lg:h-[50px] rounded-full bg-[#FFFFFF1F] text-white font-semibold lg:text-[22px] flex justify-center items-center"
-            >
-              2
-            </div>
-            <div>
-              <p class="font-semibold mb-3 lg:text-[22px] text-white">
-                Прозрачность отдела продаж
-              </p>
-              <p
-                class="text-[#696969] font-medium text-sm lg:text-base max-w-sm"
-              >
-                Внедряем CRM, воронки продаж и аналитику. Вы всегда видите, чем
-                заняты менеджеры и на каком этапе сделки.
-              </p>
-            </div>
-          </div>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="600"
-            data-aos-delay="500"
-            class="bg-black z-[2] xl:mt-[360px] w-full flex flex-col justify-between p-5 mx-auto lg:p-6 max-w-[700px] h-[340px] lg:h-[440px] border border-white/30"
-          >
-            <div
-              class="w-10 h-10 lg:w-[50px] lg:h-[50px] rounded-full bg-[#FFFFFF1F] text-white font-semibold lg:text-[22px] flex justify-center items-center"
-            >
-              3
-            </div>
-            <div>
-              <p class="font-semibold mb-3 lg:text-[22px] text-white">
-                Единая система управления
-              </p>
-              <p
-                class="text-[#696969] font-medium text-sm lg:text-base max-w-sm"
-              >
-                Интегрируем Битрикс24 с вашей 1С, телефонией, сайтом и
-                мессенджерами в единый центр управления.
-              </p>
             </div>
           </div>
         </div>
-        <img
-          src="/seo-assets/bg-vectors.png"
-          class="absolute inset-0 w-full h-full object-cover object-center z-[1]"
-        />
       </section>
 
       
 
-      <!-- Why Us Section -->
-      <section id="why-us" class="w-full bg-[#EDEDED] py-20 lg:py-[200px]">
-        <div class="prime-container px-4 lg:px-8">
-          <div class="relative">
-            <h2 class="h2-title">Почему именно мы?</h2>
-            <p class="big-text">
-              Акцент на
-              <span class="italic font-normal">команду.</span> Расставляя
-              правильные акценты можно прийти к нужному результату гораздо
-              быстрее.
-            </p>
-          </div>
-          <div
-            class="mt-5 lg:mt-[100px] grid grid-cols-1 xl:grid-cols-2 gap-x-6 gap-y-10"
-          >
-            <!-- Текст слева -->
-            <aside class="flex items-end order-last lg:order-first">
-              <p class="max-w-[650px] text-20 leading-[1.4] font-medium">
-                В ходе работ мы погрузимся в ваш бизнес, исследуем его сильные и
-                слабые стороны и улучшим маркетинг, чтобы он заработал на 100%.
-                С нас команда, с вас потребность. Совместными усилиями мы
-                достигнем нужного результата за максимально короткий промежуток
-                времени.
-              </p>
-            </aside>
+      
 
-            <!-- Текст и изображения справа -->
-            <aside
-              class="flex order-first xl:order-last flex-col justify-between"
-            >
-              <p
-                class="text-base lg:text-[28px] leading-[1.4] font-medium mb-10 xl:mb-[100px]"
-              >
-                Мы это поняли в начале своего пути, поэтому помогаем расставить
-                акценты и другим бизнесам. У всех они свои. Целью может быть
-                рост знания о бренде, количества заявок, продаж.
-              </p>
-
-              <div class="flex flex-col sm:flex-row gap-5 lg:gap-8">
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  class="w-full sm:w-1/2 lg:h-[520px] h-[400px] group overflow-hidden"
-                >
-                  <img
-                    src="/main-assets/card1.png"
-                    class="h-full w-full object-cover object-center grayscale group-hover:grayscale-0 transition duration-500 ease-in-out"
-                    alt="card1"
-                  />
-                </div>
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  data-aos-delay="100"
-                  class="w-full sm:w-1/2 group lg:h-[520px] h-[400px] overflow-hidden"
-                >
-                  <img
-                    src="/main-assets/card2.png"
-                    class="h-full w-full object-cover object-center grayscale group-hover:grayscale-0 transition duration-500 ease-in-out"
-                    alt="card2"
-                  />
-                </div>
-              </div>
-            </aside>
-          </div>
-        </div>
-      </section>
-      <section
-        id="faq"
-        class="w-full bg-black text-white relative py-20 lg:py-[200px]"
-      >
-        <div class="prime-container px-4 lg:px-8">
-          <div class="relative">
-            <h2
-              class="text-sm md:text-base lg:text-lg border-white xl:absolute top-4 mb-5 font-semibold border-t w-fit pt-2"
-            >
-              FAQ
-            </h2>
-            <p class="big-text tracking-tighter text-white mb-4 lg:mb-8">
-              Всё, что вам нужно знать о
-              <span class="italic font-normal">нашем подходе</span> и
-              <span class="italic font-normal">форматах работы</span> перед
-              стартом проекта.
-            </p>
-          </div>
-          <div class="lg:mt-[100px] mt-10">
-            <div
-              class="grid grid-cols-1 gap-y-10 lg:grid-cols-3 border-white/30 border-t lg:py-10 py-5"
-            >
-              <div>
-                <img src="/agency-assets/Icon1.png" class="w-9 lg:w-14" />
-              </div>
-              <div class="col-span-2">
-                <div class="">
-                  <div
-                    class="flex justify-between gap-5 items-center text-white cursor-pointer toggle-trigger"
-                  >
-                    <div>
-                      <p
-                        class="text-xl font-semibold leading-[1.4] lg:text-[28px]"
-                      >
-                        В какие сроки будет реализован проект?
-                      </p>
-                      <div
-                        class="mt-2 lg:mt-4 text-[#A6ABB3] text-sm lg:text-lg flex flex-wrap gap-2 items-center font-light"
-                      >
-                        <span>Сроки</span>
-                        <div
-                          class="w-1 h-1 lg:w-1.5 lg:h-1.5 rounded-full bg-[#CDD0D6]"
-                        ></div>
-                        <span>Разработка</span>
-                        <div
-                          class="w-1 h-1 lg:w-1.5 lg:h-1.5 rounded-full bg-[#CDD0D6]"
-                        ></div>
-                        <span>Индивидуальный подход</span>
-                      </div>
-                    </div>
-                    <button
-                      type="button"
-                      class="faq-btn flex justify-center items-center w-12 h-12 lg:w-[60px] lg:h-[60px] aspect-square border border-white rounded-full transition-transform duration-300"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1"
-                        class="w-6 h-6 lg:w-8 lg:h-8"
-                      >
-                        <path
-                          d="M12 5V19M5 12H19"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                  <div
-                    class="toggle-content overflow-hidden transition-[max-height] duration-500 ease-in-out"
-                    style="max-height: 0px"
-                  >
-                    <p
-                      class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5"
-                    >
-                      Этап аналитики и проектирования
-                    </p>
-                    <ul
-                      class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl font-light"
-                    >
-                      <li class="ml-3">
-                        Сбор требований и составление технического задания (до 1
-                        недели)
-                      </li>
-                      <li class="ml-3">
-                        Аудит текущих бизнес-процессов и архитектуры (до 3 дней)
-                      </li>
-                      <li class="ml-3">
-                        Проектирование оптимального решения и согласование (до 3
-                        дней)
-                      </li>
-                    </ul>
-                    <p
-                      class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5"
-                    >
-                      Этап разработки и внедрения
-                    </p>
-                    <ul
-                      class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl font-light"
-                    >
-                      <li class="ml-3">
-                        Разработка индивидуального функционала (до 3 недель)
-                      </li>
-                      <li class="ml-3">
-                        Настройка базового функционала Битрикс24 (до 1 недели)
-                      </li>
-                      <li class="ml-3">
-                        Интеграция со сторонними сервисами и 1С (зависит от
-                        сложности)
-                      </li>
-                    </ul>
-                    <p
-                      class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5"
-                    >
-                      Тестирование и запуск
-                    </p>
-                    <ul
-                      class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl font-light mb-5 lg:mb-10"
-                    >
-                      <li class="ml-3">
-                        Комплексное тестирование системы (до 3 дней)
-                      </li>
-                      <li class="ml-3">
-                        Обучение ваших сотрудников и подготовка инструкций (до 2
-                        дней)
-                      </li>
-                      <li class="ml-3">
-                        Успешный запуск и передача в эксплуатацию
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="grid grid-cols-1 gap-y-10 lg:grid-cols-3 border-white/30 border-t lg:py-10 py-5"
-            >
-              <div>
-                <img src="/agency-assets/Icon1.png" class="w-9 lg:w-14" />
-              </div>
-              <div class="col-span-2">
-                <div class="">
-                  <div
-                    class="flex justify-between gap-5 items-center text-white cursor-pointer toggle-trigger"
-                  >
-                    <div>
-                      <p
-                        class="text-xl font-semibold leading-[1.4] lg:text-[28px]"
-                      >
-                        Вы предоставляете поддержку после запуска?
-                      </p>
-                      <div
-                        class="mt-2 lg:mt-4 text-[#A6ABB3] text-sm lg:text-lg flex flex-wrap gap-2 items-center font-light"
-                      >
-                        <span>Поддержка</span>
-                        <div
-                          class="w-1 h-1 lg:w-1.5 lg:h-1.5 rounded-full bg-[#CDD0D6]"
-                        ></div>
-                        <span>Сопровождение</span>
-                        <div
-                          class="w-1 h-1 lg:w-1.5 lg:h-1.5 rounded-full bg-[#CDD0D6]"
-                        ></div>
-                        <span>Развитие</span>
-                      </div>
-                    </div>
-                    <button
-                      type="button"
-                      class="faq-btn flex justify-center items-center w-12 h-12 lg:w-[60px] lg:h-[60px] aspect-square border border-white rounded-full transition-transform duration-300"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1"
-                        class="w-6 h-6 lg:w-8 lg:h-8"
-                      >
-                        <path
-                          d="M12 5V19M5 12H19"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                  <div
-                    class="toggle-content overflow-hidden transition-[max-height] duration-500 ease-in-out"
-                    style="max-height: 0px"
-                  >
-                    <p
-                      class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5"
-                    >
-                      Гарантийная поддержка
-                    </p>
-                    <ul
-                      class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl font-light"
-                    >
-                      <li class="ml-3">
-                        Бесплатное устранение любых технических недочетов после
-                        релиза
-                      </li>
-                      <li class="ml-3">
-                        Помощь пользователям на этапе адаптации к новой системе
-                      </li>
-                      <li class="ml-3">
-                        Регулярное резервное копирование и мониторинг
-                        доступности
-                      </li>
-                    </ul>
-                    <p
-                      class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5"
-                    >
-                      Дальнейшее развитие (SLA)
-                    </p>
-                    <ul
-                      class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl font-light mb-5 lg:mb-10"
-                    >
-                      <li class="ml-3">
-                        Приоритетное решение инцидентов и задач (по договору
-                        SLA)
-                      </li>
-                      <li class="ml-3">
-                        Постоянное расширение функционала под растущие запросы
-                        бизнеса
-                      </li>
-                      <li class="ml-3">
-                        Выделенная команда аналитиков и разработчиков для вашего
-                        проекта
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="grid grid-cols-1 gap-y-10 lg:grid-cols-3 border-white/30 border-t lg:py-10 py-5"
-            >
-              <div>
-                <img src="/agency-assets/Icon1.png" class="w-9 lg:w-14" />
-              </div>
-              <div class="col-span-2">
-                <div class="">
-                  <div
-                    class="flex justify-between gap-5 items-center text-white cursor-pointer toggle-trigger"
-                  >
-                    <div>
-                      <p
-                        class="text-xl font-semibold leading-[1.4] lg:text-[28px]"
-                      >
-                        Можно ли интегрировать 1С-Битрикс24 с нашей 1С?
-                      </p>
-                      <div
-                        class="mt-2 lg:mt-4 text-[#A6ABB3] text-sm lg:text-lg flex flex-wrap gap-2 items-center font-light"
-                      >
-                        <span>Интеграция</span>
-                        <div
-                          class="w-1 h-1 lg:w-1.5 lg:h-1.5 rounded-full bg-[#CDD0D6]"
-                        ></div>
-                        <span>1С</span>
-                        <div
-                          class="w-1 h-1 lg:w-1.5 lg:h-1.5 rounded-full bg-[#CDD0D6]"
-                        ></div>
-                        <span>Битрикс24</span>
-                      </div>
-                    </div>
-                    <button
-                      type="button"
-                      class="faq-btn flex justify-center items-center w-12 h-12 lg:w-[60px] lg:h-[60px] aspect-square border border-white rounded-full transition-transform duration-300"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1"
-                        class="w-6 h-6 lg:w-8 lg:h-8"
-                      >
-                        <path
-                          d="M12 5V19M5 12H19"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                  <div
-                    class="toggle-content overflow-hidden transition-[max-height] duration-500 ease-in-out"
-                    style="max-height: 0px"
-                  >
-                    <p
-                      class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5"
-                    >
-                      Базовая интеграция
-                    </p>
-                    <ul
-                      class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl font-light"
-                    >
-                      <li class="ml-3">
-                        Синхронизация контрагентов, товаров и заказов с
-                        Битрикс24
-                      </li>
-                      <li class="ml-3">
-                        Обновление статусов заказов и передача печатных форм
-                      </li>
-                      <li class="ml-3">
-                        Быстрая настройка с использованием стандартных модулей
-                        обмена
-                      </li>
-                    </ul>
-                    <p
-                      class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5"
-                    >
-                      Индивидуальные сценарии
-                    </p>
-                    <ul
-                      class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl font-light mb-5 lg:mb-10"
-                    >
-                      <li class="ml-3">
-                        Доработка логики обмена под специфику вашего бизнеса
-                      </li>
-                      <li class="ml-3">
-                        Интеграция с нестандартными и сильно доработанными
-                        конфигурациями 1С
-                      </li>
-                      <li class="ml-3">
-                        Двусторонний обмен сложными справочниками и
-                        аналитическими данными
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="grid grid-cols-1 gap-y-10 lg:grid-cols-3 border-white/30 border-t border-b lg:py-10 py-5"
-            >
-              <div>
-                <img src="/agency-assets/Icon1.png" class="w-9 lg:w-14" />
-              </div>
-              <div class="col-span-2">
-                <div class="">
-                  <div
-                    class="flex justify-between gap-5 items-center text-white cursor-pointer toggle-trigger"
-                  >
-                    <div>
-                      <p
-                        class="text-xl font-semibold leading-[1.4] lg:text-[28px]"
-                      >
-                        Как происходит процесс оплаты?
-                      </p>
-                      <div
-                        class="mt-2 lg:mt-4 text-[#A6ABB3] text-sm lg:text-lg flex flex-wrap gap-2 items-center font-light"
-                      >
-                        <span>Оплата</span>
-                        <div
-                          class="w-1 h-1 lg:w-1.5 lg:h-1.5 rounded-full bg-[#CDD0D6]"
-                        ></div>
-                        <span>Договор</span>
-                        <div
-                          class="w-1 h-1 lg:w-1.5 lg:h-1.5 rounded-full bg-[#CDD0D6]"
-                        ></div>
-                        <span>Этапы работ</span>
-                      </div>
-                    </div>
-                    <button
-                      type="button"
-                      class="faq-btn flex justify-center items-center w-12 h-12 lg:w-[60px] lg:h-[60px] aspect-square border border-white rounded-full transition-transform duration-300"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1"
-                        class="w-6 h-6 lg:w-8 lg:h-8"
-                      >
-                        <path
-                          d="M12 5V19M5 12H19"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                  <div
-                    class="toggle-content overflow-hidden transition-[max-height] duration-500 ease-in-out"
-                    style="max-height: 0px"
-                  >
-                    <p
-                      class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5"
-                    >
-                      Форматы оплаты
-                    </p>
-                    <ul
-                      class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl font-light"
-                    >
-                      <li class="ml-3">
-                        Работаем как с юридическими, так и с физическими лицами
-                      </li>
-                      <li class="ml-3">
-                        Возможна оплата по безналичному расчету с
-                        предоставлением закрывающих документов
-                      </li>
-                      <li class="ml-3">
-                        Принимаем платежи по СБП и корпоративным картам
-                      </li>
-                    </ul>
-                    <p
-                      class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5"
-                    >
-                      Разбивка по этапам
-                    </p>
-                    <ul
-                      class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl font-light mb-5 lg:mb-10"
-                    >
-                      <li class="ml-3">
-                        Авансовый платеж перед стартом работ (обычно 50%)
-                      </li>
-                      <li class="ml-3">
-                        Промежуточные платежи по факту сдачи спринтов (для
-                        крупных проектов)
-                      </li>
-                      <li class="ml-3">
-                        Финальный расчет после успешного тестирования и
-                        подписания актов
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section
         id="contacts"
         class="mb-20 lg:mb-[200px] border-t border-[#CDD0D6] relative overflow-hidden"
@@ -1140,8 +568,8 @@
               <a class="text-20 footer-link font-medium relative w-fit animated-underline" href="amocrm.html">Внедрение amoCRM</a>
               <a class="text-20 footer-link font-medium relative w-fit animated-underline" href="moysklad.html">Внедрение МойСклад</a>
               <a class="text-20 footer-link font-medium relative w-fit animated-underline" href="1c.html">Внедрение 1С</a>
-              <a class="text-20 footer-link font-medium relative w-fit animated-underline cursor-pointer" data-popup="project">Лицензии Kaspersky</a>
-              <a class="text-20 footer-link font-medium relative w-fit animated-underline cursor-pointer" data-popup="project">Лицензии Astra Linux</a>
+              <a href="kaspersky.html" class="text-20 footer-link font-medium relative w-fit animated-underline cursor-pointer">Лицензии Kaspersky</a>
+              <a href="astralinux.html" class="text-20 footer-link font-medium relative w-fit animated-underline cursor-pointer">Лицензии Astra Linux</a>
             </div>
           </div>
           
