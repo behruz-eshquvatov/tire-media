@@ -63,11 +63,9 @@
           </div>
           <a class="nav-link" href="contacts.html">Контакты</a>
         </nav>
-      <div class="flex gap-6 items-center">
+      <div class="flex items-center gap-4 lg:gap-6">
+        <a href="mailto:info@faktor.ru" class="text-20 nav-link">info@faktor.ru</a>
         <a href="tel:+70000000000" class="text-20 nav-link">+7 000 000-00-00</a>
-        <button data-popup="project" class="xl:block hidden transparent-btn">
-          Отправить бриф
-        </button>
       </div>
     </header>
     <!-- Mobile Header -->
@@ -81,9 +79,6 @@
           class="w-6 h-6"
         />
       </button>
-      <button data-popup="project" class="text-20 header-btn_mobile">
-        Отправить бриф
-      </button>
     </div>
 
     <!-- Mobile Menu -->
@@ -91,11 +86,25 @@
       <div id="menu-overlay" class="overlay opacity-0"></div>
       <div id="mobile-menu" class="mobile-menu translate-x-full">
         <nav class="flex flex-col gap-6 p-6">
-          <a href="#tasks" class="nav-link_mobile">Задачи</a>
-          <a href="#stages" class="nav-link_mobile">Этапы</a>
-          <a href="#why-us" class="nav-link_mobile">О нас</a>
-          <a href="#packages" class="nav-link_mobile">Пакеты</a>
-          <a href="#faq" class="nav-link_mobile">FAQ</a>
+          <div class="nav-dropdown_mobile toggle-trigger">
+            <span class="text-2xl font-semibold">Интеграции</span>
+            <svg class="w-6 h-6 faq-btn transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"></path></svg>
+          </div>
+          <div class="max-h-0 overflow-hidden transition-all duration-500 pl-4 flex flex-col gap-4 mt-[-10px]">
+            <a href="bitrix24.html" class="nav-sublink_mobile">Внедрение Битрикс24</a>
+            <a href="amocrm.html" class="nav-sublink_mobile">Внедрение amoCRM</a>
+            <a href="moysklad.html" class="nav-sublink_mobile">Внедрение МойСклад</a>
+            <a href="1c.html" class="nav-sublink_mobile">Внедрение 1С</a>
+          </div>
+
+          <div class="nav-dropdown_mobile toggle-trigger">
+            <span class="text-2xl font-semibold">Лицензии</span>
+            <svg class="w-6 h-6 faq-btn transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"></path></svg>
+          </div>
+          <div class="max-h-0 overflow-hidden transition-all duration-500 pl-4 flex flex-col gap-4 mt-[-10px]">
+            <a href="kaspersky.html" class="nav-sublink_mobile">Лицензии Kaspersky</a>
+            <a href="astralinux.html" class="nav-sublink_mobile">Лицензии Astra Linux</a>
+          </div>
           <a href="contacts.html" class="nav-link_mobile">Контакты</a>
         </nav>
       </div>

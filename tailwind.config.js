@@ -20,8 +20,8 @@ export default {
       screens: {
         ...defaultTheme.screens,
         md: '770px',
-        lg: '1100px',
-        xl: '1350px',
+        lg: '1024px',
+        xl: '1100px',
         '2xl': '1720px',
       },
       spacing: {
