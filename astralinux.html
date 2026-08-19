@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -76,7 +76,7 @@
       <div class="flex gap-6 items-center">
         <a href="tel:+70000000000" class="text-20 nav-link">+7 000 000-00-00</a>
         <button data-popup="project" class="xl:block hidden transparent-btn">
-          Отправить бриф
+          Отправить заявку
         </button>
       </div>
     </header>
@@ -92,7 +92,7 @@
         />
       </button>
       <button data-popup="project" class="text-20 header-btn_mobile">
-        Отправить бриф
+        Отправить заявку
       </button>
     </div>
 
@@ -143,7 +143,7 @@
           <p
             class="2xl:mb-5 font-semibold text-xl mb-3 lg:text-[30px] 2xl:text-[40px]"
           >
-            Заполните бриф
+            Заполните заявку
           </p>
           <p class="font-medium leading-[1.4] 2xl:text-20 lg:mb-5 2xl:mb-10">
             Расскажите о ваших задачах, и мы подготовим коммерческое
@@ -151,16 +151,6 @@
           </p>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 2xl:gap-8 mb-5">
-            <div>
-              <label class="form-label block mb-2 text-sm lg:text-base"
-                >Название компании</label
-              >
-              <input
-                type="text"
-                placeholder="ООО 'Пример'"
-                class="form-input"
-              />
-            </div>
             <div>
               <label class="form-label block mb-2 text-sm lg:text-base"
                 >Контактное лицо</label
@@ -176,27 +166,6 @@
                 placeholder="+7 (___) ___-__-__"
                 class="form-input"
               />
-            </div>
-            <div>
-              <label class="form-label block mb-2 text-sm lg:text-base"
-                >Сфера деятельности</label
-              >
-              <input
-                type="text"
-                placeholder="Производство / Услуги / Торговля"
-                class="form-input"
-              />
-            </div>
-            <div class="md:col-span-2">
-              <label class="form-label block mb-2 text-sm lg:text-base"
-                >Количество сотрудников в CRM</label
-              >
-              <select class="form-input bg-white w-full">
-                <option>До 10 человек</option>
-                <option>10 - 50 человек</option>
-                <option>50 - 100 человек</option>
-                <option>Более 100 человек</option>
-              </select>
             </div>
             <div class="md:col-span-2">
               <label class="form-label block mb-2 text-sm lg:text-base"
@@ -226,9 +195,9 @@
             id="project-submit"
             type="button"
             class="black-btn mt-5 w-full md:w-auto"
-            onclick="alert('Бриф успешно отправлен!')"
+            onclick="alert('Заявкa успешно отправлен!')"
           >
-            Отправить бриф
+            Отправить заявку
           </button>
         </form>
         <div
@@ -309,949 +278,129 @@
           />
         </div>
       </section>
-      <!-- Направления -->
-      <section id="directions" class="relative py-20 lg:py-[100px] bg-white overflow-hidden group/slider">
+      <!-- РџСЂРѕРґСѓРєС‚С‹ -->
+      <section id="directions" class="relative pt-20 lg:pt-[100px] bg-white overflow-hidden group/slider">
         <img src="/seo-assets/bg-vectors.png" class="absolute inset-0 w-full h-full object-cover object-center z-[0] pointer-events-none" />
 
         <div class="prime-container px-4 lg:px-8 relative">
           <div class="relative mb-12 lg:mb-20">
-            <h2 class="h2-title">Направления</h2>
+            <h2 class="h2-title">Продукты</h2>
             <p class="xl:indent-[20vw] big-text">
-              Выберите подходящее для вас
-              <span class="italic font-normal">направление</span> работы.
+              Лицензии РЅР°
+              <span class="italic font-normal">продукты</span> Astra Linux.
             </p>
           </div>
           
           <div class="relative">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
 
-              <!-- Card 1: Битрикс24 -->
               <div class="w-full direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden">
                 <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
-                  <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
-                    <p class="text-2xl lg:text-3xl font-semibold truncate" title="Битрикс24">Битрикс24</p>
-                    <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-                  </div>
-                  <p class="opacity-70 text-sm lg:text-base font-medium">Комплексное внедрение CRM, настройка бизнес-процессов и обучение сотрудников.</p>
+                  <p class="text-2xl lg:text-3xl font-semibold mb-3 lg:mb-4">Astra Linux Special Edition</p>
+                  <p class="opacity-70 text-sm lg:text-base font-medium mb-3">Защищённая ОС для работы с конфиденциальной информацией и государственной тайной.</p>
+                  <ul class="opacity-60 text-xs lg:text-sm space-y-1.5">
+                    <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-black mt-1.5 shrink-0"></span>Сертификаты ФСТЭК и ФСБ</li>
+                    <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-black mt-1.5 shrink-0"></span>Мандатное разграничение доступа</li>
+                    <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-black mt-1.5 shrink-0"></span>Замкнутая программная среда</li>
+                  </ul>
+                  <p class="opacity-60 text-xs lg:text-sm mt-3">Подходит для поэтапного внедрения и масштабирования без лишней нагрузки на команду.</p>
                 </div>
-                
-                <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100 bg-black">
-                  <a href="bitrix24.html" class="text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer w-full h-full">
-                    Перейти
-                    <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-                  </a>
+                <div class="absolute inset-0 z-20 flex flex-col items-center justify-center p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto bg-black text-white text-center">
+                  <p class="text-lg lg:text-xl font-semibold mb-2">Сертифицированная ОС</p>
+                  <p class="text-sm lg:text-base opacity-80">Для госструктур и организаций, работающих с данными ограниченного доступа.</p>
                 </div>
-                <img src="/main-assets/1c.webp" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale" />
               </div>
 
-              <!-- Card 2: Kaspersky -->
               <div class="w-full direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden">
                 <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
-                  <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
-                    <p class="text-2xl lg:text-3xl font-semibold truncate" title="Kaspersky">Kaspersky</p>
-                    <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-                  </div>
-                  <p class="opacity-70 text-sm lg:text-base font-medium">Лицензии на продукты Kaspersky. Официальный партнер, реализация лицензий на ПО.</p>
+                  <p class="text-2xl lg:text-3xl font-semibold mb-3 lg:mb-4">Astra Linux Common Edition</p>
+                  <p class="opacity-70 text-sm lg:text-base font-medium mb-3">Универсальная отечественная ОС для рабочих станций, серверов и облачных сред.</p>
+                  <ul class="opacity-60 text-xs lg:text-sm space-y-1.5">
+                    <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-black mt-1.5 shrink-0"></span>Совместимость с 1С и офисными пакетами</li>
+                    <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-black mt-1.5 shrink-0"></span>Поддержка x86, ARM, Эльбрус</li>
+                    <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-black mt-1.5 shrink-0"></span>Бесплатные обновления безопасности</li>
+                  </ul>
+                  <p class="opacity-60 text-xs lg:text-sm mt-3">Подходит для поэтапного внедрения и масштабирования без лишней нагрузки на команду.</p>
                 </div>
-                <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100 bg-black">
-                  <a href="kaspersky.html" class="text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer w-full h-full">
-                    Перейти
-                    <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-                  </a>
+                <div class="absolute inset-0 z-20 flex flex-col items-center justify-center p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto bg-black text-white text-center">
+                  <p class="text-lg lg:text-xl font-semibold mb-2">Для бизнеса и госсектора</p>
+                  <p class="text-sm lg:text-base opacity-80">Импортозамещение без потери функциональности. Полная поддержка от вендора.</p>
                 </div>
-                <img src="/main-assets/kaspersky_hero.jpg" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale opacity-50" />
               </div>
 
-              <!-- Card 3: Astra Linux -->
               <div class="w-full direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden">
                 <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
-                  <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
-                    <p class="text-2xl lg:text-3xl font-semibold truncate" title="Astra Linux">Astra Linux</p>
-                    <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-                  </div>
-                  <p class="opacity-70 text-sm lg:text-base font-medium">Официальный партнер по внедрению и лицензированию отечественной операционной системы.</p>
+                  <p class="text-2xl lg:text-3xl font-semibold mb-3 lg:mb-4">ALD Pro</p>
+                  <p class="opacity-70 text-sm lg:text-base font-medium mb-3">Служба каталогов для централизованного управления учётными записями и политиками.</p>
+                  <ul class="opacity-60 text-xs lg:text-sm space-y-1.5">
+                    <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-black mt-1.5 shrink-0"></span>Замена Active Directory</li>
+                    <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-black mt-1.5 shrink-0"></span>SSO-авторизация для сотрудников</li>
+                    <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-black mt-1.5 shrink-0"></span>Групповые политики безопасности</li>
+                  </ul>
+                  <p class="opacity-60 text-xs lg:text-sm mt-3">Подходит для поэтапного внедрения и масштабирования без лишней нагрузки на команду.</p>
                 </div>
-                <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100 bg-black">
-                  <a href="astralinux.html" class="text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer w-full h-full">
-                    Перейти
-                    <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-                  </a>
+                <div class="absolute inset-0 z-20 flex flex-col items-center justify-center p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto bg-black text-white text-center">
+                  <p class="text-lg lg:text-xl font-semibold mb-2">Управление доменом</p>
+                  <p class="text-sm lg:text-base opacity-80">Российский аналог Active Directory с полной интеграцией в Astra Linux.</p>
                 </div>
-                <img src="/main-assets/astralinux_hero.png" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale opacity-50" />
               </div>
 
-              <!-- Card 4: 1С:Предприятие -->
               <div class="w-full direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden">
                 <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
-                  <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
-                    <p class="text-2xl lg:text-3xl font-semibold truncate" title="1С:Предприятие">1С:Предприятие</p>
-                    <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-                  </div>
-                  <p class="opacity-70 text-sm lg:text-base font-medium">Синхронизация баз данных и настройка обмена с другими системами.</p>
+                  <p class="text-2xl lg:text-3xl font-semibold mb-3 lg:mb-4">Astra Monitoring</p>
+                  <p class="opacity-70 text-sm lg:text-base font-medium mb-3">Система мониторинга IT-инфраструктуры на базе отечественной платформы.</p>
+                  <ul class="opacity-60 text-xs lg:text-sm space-y-1.5">
+                    <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-black mt-1.5 shrink-0"></span>Мониторинг серверов и сетей</li>
+                    <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-black mt-1.5 shrink-0"></span>Оповещения и автоматические действия</li>
+                    <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-black mt-1.5 shrink-0"></span>Визуальные дашборды и отчёты</li>
+                  </ul>
+                  <p class="opacity-60 text-xs lg:text-sm mt-3">Подходит для поэтапного внедрения и масштабирования без лишней нагрузки на команду.</p>
                 </div>
-                <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100 bg-black">
-                  <a href="1c.html" class="text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer w-full h-full">
-                    Перейти
-                    <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-                  </a>
+                <div class="absolute inset-0 z-20 flex flex-col items-center justify-center p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto bg-black text-white text-center">
+                  <p class="text-lg lg:text-xl font-semibold mb-2">Контроль инфраструктуры</p>
+                  <p class="text-sm lg:text-base opacity-80">Отслеживание состояния всех систем в режиме реального времени.</p>
                 </div>
-                <img src="/main-assets/1c_logo.png" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale" />
               </div>
 
-              <!-- Card 5: amoCRM -->
               <div class="w-full direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden">
                 <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
-                  <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
-                    <p class="text-2xl lg:text-3xl font-semibold truncate" title="amoCRM">amoCRM</p>
-                    <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-                  </div>
-                  <p class="opacity-70 text-sm lg:text-base font-medium">Построение прозрачного отдела продаж и интеграция мессенджеров.</p>
+                  <p class="text-2xl lg:text-3xl font-semibold mb-3 lg:mb-4">Astra Automation</p>
+                  <p class="opacity-70 text-sm lg:text-base font-medium mb-3">Платформа автоматизации управления конфигурациями и развёртывания.</p>
+                  <ul class="opacity-60 text-xs lg:text-sm space-y-1.5">
+                    <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-black mt-1.5 shrink-0"></span>Аналог Ansible для Astra Linux</li>
+                    <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-black mt-1.5 shrink-0"></span>Массовое развёртывание обновлений</li>
+                    <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-black mt-1.5 shrink-0"></span>Управление парком из 1000+ машин</li>
+                  </ul>
+                  <p class="opacity-60 text-xs lg:text-sm mt-3">Подходит для поэтапного внедрения и масштабирования без лишней нагрузки на команду.</p>
                 </div>
-                <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100 bg-black">
-                  <a href="amocrm.html" class="text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer w-full h-full">
-                    Перейти
-                    <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-                  </a>
+                <div class="absolute inset-0 z-20 flex flex-col items-center justify-center p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto bg-black text-white text-center">
+                  <p class="text-lg lg:text-xl font-semibold mb-2">DevOps по-русски</p>
+                  <p class="text-sm lg:text-base opacity-80">Автоматизация рутинных задач администрирования в защищённой среде.</p>
                 </div>
-                <img src="/main-assets/amocrm_logo.png" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale" />
               </div>
 
-              <!-- Card 6: МойСклад -->
               <div class="w-full direction-card aspect-square bg-[#F5F5F5] p-5 lg:p-6 flex flex-col group relative overflow-hidden">
                 <div class="relative z-10 h-full flex flex-col text-black transition-opacity duration-500 group-hover:opacity-0">
-                  <div class="flex justify-between items-start mb-3 lg:mb-4 gap-2 lg:gap-4">
-                    <p class="text-2xl lg:text-3xl font-semibold truncate" title="МойСклад">МойСклад</p>
-                    <svg class="w-6 h-6 lg:w-8 lg:h-8 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-                  </div>
-                  <p class="opacity-70 text-sm lg:text-base font-medium">Автоматизация складского учета и интеграция с маркетплейсами.</p>
+                  <p class="text-2xl lg:text-3xl font-semibold mb-3 lg:mb-4">Tantor СУБД</p>
+                  <p class="opacity-70 text-sm lg:text-base font-medium mb-3">Отечественная СУБД на базе PostgreSQL для корпоративных решений.</p>
+                  <ul class="opacity-60 text-xs lg:text-sm space-y-1.5">
+                    <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-black mt-1.5 shrink-0"></span>100% совместимость с PostgreSQL</li>
+                    <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-black mt-1.5 shrink-0"></span>Встроенное шифрование данных</li>
+                    <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-black mt-1.5 shrink-0"></span>Техподдержка на русском языке</li>
+                  </ul>
+                  <p class="opacity-60 text-xs lg:text-sm mt-3">Подходит для поэтапного внедрения и масштабирования без лишней нагрузки на команду.</p>
                 </div>
-                <div class="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto delay-100 bg-black">
-                  <a href="moysklad.html" class="text-white flex items-center justify-center gap-3 transition-transform duration-75 ease-out relative z-30 text-2xl lg:text-3xl font-medium hover:opacity-80 cursor-pointer w-full h-full">
-                    Перейти
-                    <svg class="w-8 h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"></path></svg>
-                  </a>
+                <div class="absolute inset-0 z-20 flex flex-col items-center justify-center p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto bg-black text-white text-center">
+                  <p class="text-lg lg:text-xl font-semibold mb-2">Замена Oracle и MS SQL</p>
+                  <p class="text-sm lg:text-base opacity-80">Импортонезависимая СУБД с корпоративной поддержкой и сертификацией.</p>
                 </div>
-                <img src="/main-assets/moysklad_logo.png" alt="" class="absolute -bottom-10 -right-8 w-40 h-40 lg:w-48 lg:h-48 object-contain transition-opacity duration-500 group-hover:opacity-0 pointer-events-none z-0 mix-blend-multiply grayscale" />
               </div>
 
             </div>
           </div>
         </div>
       </section>
-
-      
-
-      <!-- Задачи -->
-      <section
-        id="tasks"
-        class="prime-container relative py-20 lg:py-[200px] overflow-hidden bg-black px-4 lg:px-8"
-      >
-        <img
-          src="/seo-assets/bg-vectors.png"
-          class="absolute inset-0 w-full h-full object-cover object-center z-[0] pointer-events-none"
-        />
-
-        <!-- Background graphics -->
-
-        <p class="text-center indent-0 text-white big-text">
-          Какие задачи решаем
-        </p>
-        <div
-          class="z-10 flex justify-center mt-10 lg:mt-[100px] h-fit flex-col xl:flex-row gap-y-4 relative"
-        >
-          <div
-            data-aos="fade-up"
-            data-aos-duration="600"
-            class="bg-black z-[2] w-full flex flex-col justify-between p-5 lg:p-6 mx-auto max-w-[700px] h-[340px] lg:h-[440px] border border-white/30"
-          >
-            <div
-              class="w-10 h-10 lg:w-[50px] lg:h-[50px] rounded-full bg-[#FFFFFF1F] text-white font-semibold lg:text-[22px] flex justify-center items-center"
-            >
-              1
-            </div>
-            <div>
-              <p class="font-semibold mb-3 lg:text-[22px] text-white">
-                Автоматизация рутины
-              </p>
-              <p
-                class="text-[#696969] font-medium text-sm lg:text-base max-w-sm"
-              >
-                Снимаем рутинные задачи с сотрудников, настраиваем роботов и
-                бизнес-процессы для автоматической работы.
-              </p>
-            </div>
-          </div>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="600"
-            data-aos-delay="250"
-            class="bg-black xl:-mx-20 z-[2] xl:mt-[180px] w-full flex flex-col justify-between p-5 mx-auto lg:p-6 max-w-[700px] h-[340px] lg:h-[440px] border border-white/30"
-          >
-            <div
-              class="w-10 h-10 lg:w-[50px] lg:h-[50px] rounded-full bg-[#FFFFFF1F] text-white font-semibold lg:text-[22px] flex justify-center items-center"
-            >
-              2
-            </div>
-            <div>
-              <p class="font-semibold mb-3 lg:text-[22px] text-white">
-                Прозрачность отдела продаж
-              </p>
-              <p
-                class="text-[#696969] font-medium text-sm lg:text-base max-w-sm"
-              >
-                Внедряем CRM, воронки продаж и аналитику. Вы всегда видите, чем
-                заняты менеджеры и на каком этапе сделки.
-              </p>
-            </div>
-          </div>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="600"
-            data-aos-delay="500"
-            class="bg-black z-[2] xl:mt-[360px] w-full flex flex-col justify-between p-5 mx-auto lg:p-6 max-w-[700px] h-[340px] lg:h-[440px] border border-white/30"
-          >
-            <div
-              class="w-10 h-10 lg:w-[50px] lg:h-[50px] rounded-full bg-[#FFFFFF1F] text-white font-semibold lg:text-[22px] flex justify-center items-center"
-            >
-              3
-            </div>
-            <div>
-              <p class="font-semibold mb-3 lg:text-[22px] text-white">
-                Единая система управления
-              </p>
-              <p
-                class="text-[#696969] font-medium text-sm lg:text-base max-w-sm"
-              >
-                Интегрируем 1С с вашей 1С, телефонией, сайтом и мессенджерами в
-                единый центр управления.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Why Us Section -->
-      <section id="why-us" class="w-full bg-[#EDEDED] py-20 lg:py-[200px]">
-        <div class="prime-container px-4 lg:px-8">
-          <div class="relative">
-            <h2 class="h2-title">Почему именно мы?</h2>
-            <p class="big-text">
-              Акцент на
-              <span class="italic font-normal">команду.</span> Расставляя
-              правильные акценты можно прийти к нужному результату гораздо
-              быстрее.
-            </p>
-          </div>
-          <div
-            class="mt-5 lg:mt-[100px] grid grid-cols-1 xl:grid-cols-2 gap-x-6 gap-y-10"
-          >
-            <!-- Текст слева -->
-            <aside class="flex items-end order-last lg:order-first">
-              <p class="max-w-[650px] text-20 leading-[1.4] font-medium">
-                В ходе работ мы погрузимся в ваш бизнес, исследуем его сильные и
-                слабые стороны и улучшим маркетинг, чтобы он заработал на 100%.
-                С нас команда, с вас потребность. Совместными усилиями мы
-                достигнем нужного результата за максимально короткий промежуток
-                времени.
-              </p>
-            </aside>
-
-            <!-- Текст и изображения справа -->
-            <aside
-              class="flex order-first xl:order-last flex-col justify-between"
-            >
-              <p
-                class="text-base lg:text-[28px] leading-[1.4] font-medium mb-10 xl:mb-[100px]"
-              >
-                Мы это поняли в начале своего пути, поэтому помогаем расставить
-                акценты и другим бизнесам. У всех они свои. Целью может быть
-                рост знания о бренде, количества заявок, продаж.
-              </p>
-
-              <div class="flex flex-col sm:flex-row gap-5 lg:gap-8">
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  class="w-full sm:w-1/2 lg:h-[520px] h-[400px] group overflow-hidden"
-                >
-                  <img
-                    src="/main-assets/card1.png"
-                    class="h-full w-full object-cover object-center grayscale group-hover:grayscale-0 transition duration-500 ease-in-out"
-                    alt="card1"
-                  />
-                </div>
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  data-aos-delay="100"
-                  class="w-full sm:w-1/2 group lg:h-[520px] h-[400px] overflow-hidden"
-                >
-                  <img
-                    src="/main-assets/card2.png"
-                    class="h-full w-full object-cover object-center grayscale group-hover:grayscale-0 transition duration-500 ease-in-out"
-                    alt="card2"
-                  />
-                </div>
-              </div>
-            </aside>
-          </div>
-        </div>
-      </section>
-      <section
-        id="stages"
-        class="w-full relative prime-container px-4 lg:px-8 py-[60px] lg:py-[120px]"
-      >
-        <img
-          src="/seo-assets/bg-vectors.png"
-          class="absolute inset-0 w-full h-full object-cover object-center z-[0] pointer-events-none"
-        />
-
-        <img
-          src="/main-assets/some_image.png"
-          data-aos="zoom-in"
-          data-aos-delay="200"
-          class="absolute top-[10%] right-[10%] w-24 md:w-36 -rotate-45 pointer-events-none opacity-60 blur-md"
-          alt="decoration"
-        />
-        <div class="relative z-10">
-          <h2 class="h2-title">Этапы интеграции</h2>
-          <p class="big-text">
-            Акцент на <span class="italic font-normal">результат</span>. Как мы
-            работаем.
-          </p>
-        </div>
-        <div
-          class="grid py-10 lg:py-[100px] grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-8"
-        >
-          <!-- Card 1 -->
-          <div
-            data-aos="fade-up"
-            data-aos-duration="400"
-            class="group service-card cursor-pointer"
-          >
-            <img
-              src="/Vector(Stroke).png"
-              class="service-card-img w-full h-full inset-0 z-0 rotate-0"
-              style="filter: brightness(0) opacity(0.1)"
-            />
-
-            <div class="service-card-bullet">1</div>
-            <div class="z-10">
-              <p class="service-card-title">Аудит и аналитика</p>
-              <div class="service-card-text-wrapper">
-                <p class="service-card-description">
-                  Изучаем ваши бизнес-процессы, составляем подробное ТЗ и
-                  определяем узкие места.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div
-            data-aos="fade-up"
-            data-aos-duration="400"
-            data-aos-delay="100"
-            class="group service-card cursor-pointer"
-          >
-            <img
-              src="/Vector(Stroke).png"
-              class="service-card-img w-full h-full inset-0 z-0 rotate-90"
-              style="filter: brightness(0) opacity(0.1)"
-            />
-
-            <div class="service-card-bullet">2</div>
-            <div class="z-10">
-              <p class="service-card-title">Базовая настройка</p>
-              <div class="service-card-text-wrapper">
-                <p class="service-card-description">
-                  Регистрируем портал, настраиваем структуру компании, права
-                  доступа и подключаем каналы связи.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div
-            data-aos="fade-up"
-            data-aos-duration="400"
-            data-aos-delay="200"
-            class="group service-card cursor-pointer"
-          >
-            <img
-              src="/Vector(Stroke).png"
-              class="service-card-img w-full h-full inset-0 z-0 rotate-180"
-              style="filter: brightness(0) opacity(0.1)"
-            />
-
-            <div class="service-card-bullet">3</div>
-            <div class="z-10">
-              <p class="service-card-title">Автоматизация</p>
-              <div class="service-card-text-wrapper">
-                <p class="service-card-description">
-                  Настраиваем воронки продаж, роботов, бизнес-процессы и
-                  интеграцию с 1С.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div
-            data-aos="fade-up"
-            data-aos-duration="400"
-            data-aos-delay="300"
-            class="group service-card cursor-pointer"
-          >
-            <img
-              src="/Vector(Stroke).png"
-              class="service-card-img w-full h-full inset-0 z-0 -rotate-90"
-              style="filter: brightness(0) opacity(0.1)"
-            />
-
-            <div class="service-card-bullet">4</div>
-            <div class="z-10">
-              <p class="service-card-title">Обучение и поддержка</p>
-              <div class="service-card-text-wrapper">
-                <p class="service-card-description">
-                  Проводим обучение для ваших сотрудников и обеспечиваем
-                  техническую поддержку.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Стоимость Section -->
-      <section
-        class="w-full relative bg-black text-white py-20 lg:py-[150px] overflow-hidden flex flex-col items-center text-center mt-20"
-      >
-        <img
-          src="/seo-assets/bg-vectors.png"
-          class="absolute inset-0 w-full h-full object-cover object-center z-[0] pointer-events-none"
-        />
-
-        <!-- Wavy Background -->
-
-        <div
-          class="relative z-10 prime-container px-4 flex flex-col items-center"
-        >
-          <div class="w-8 h-[1px] bg-white mb-4 mx-auto"></div>
-          <p class="text-sm font-semibold mb-12 lg:mb-16">Стоимость</p>
-
-          <h2
-            class="text-5xl md:text-6xl lg:text-7xl font-semibold mb-12 lg:mb-16 font-montserrat"
-          >
-            от 20000 ₽
-          </h2>
-
-          <p
-            class="text-lg lg:text-xl max-w-2xl leading-relaxed mb-12 lg:mb-16 text-[#EDEDED]"
-          >
-            Стоимость рассчитывается, исходя из трудозатрат, по часам.<br />
-            Стоимость часа специалиста от 20000 ₽
-          </p>
-
-          <button
-            data-popup="project"
-            class="bg-white text-black font-semibold text-lg py-4 px-12 rounded-[100px] hover:bg-gray-200 transition duration-300"
-          >
-            Получить предложение
-          </button>
-        </div>
-      </section>
-
-      <!-- Почему бизнес выбирает 1С Section -->
-      <section
-        class="w-full relative bg-white py-[60px] lg:py-[120px] border-t border-[#CDD0D6]"
-      >
-        <img
-          src="/seo-assets/bg-vectors.png"
-          class="absolute inset-0 w-full h-full object-cover object-center z-[0] pointer-events-none"
-        />
-
-        <div class="prime-container px-4 lg:px-8">
-          <div class="flex flex-col xl:flex-row gap-10 xl:gap-[100px]">
-            <!-- Left: Heading -->
-            <div class="xl:w-[45%] shrink-0 xl:sticky xl:top-32 h-fit">
-              <h2 class="big-text2 leading-[1.1] mb-6">
-                <span
-                  class="italic font-normal block"
-                  style="font-family: &quot;LT Superior&quot;, sans-serif"
-                  >Почему бизнес</span
-                >
-                <span class="block">выбирает Astra Linux</span>
-              </h2>
-            </div>
-
-            <!-- Right: Grid of items -->
-            <div
-              class="xl:w-[55%] grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12 lg:gap-y-16 mt-4 xl:mt-0"
-            >
-              <!-- Item 1 -->
-              <div data-aos="fade-up" data-aos-duration="600">
-                <svg
-                  class="w-12 h-12 mb-5 text-black"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
-                  ></path>
-                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                </svg>
-                <h3 class="text-xl font-bold mb-3 font-semibold">
-                  Единое пространство
-                </h3>
-                <p
-                  class="text-[#696969] text-base md:text-lg leading-relaxed font-medium"
-                >
-                  Все необходимые инструменты для работы компании в одном месте.
-                  Сотрудникам не нужно переключаться между десятками разных
-                  приложений.
-                </p>
-              </div>
-
-              <!-- Item 2 -->
-              <div
-                data-aos="fade-up"
-                data-aos-duration="600"
-                data-aos-delay="100"
-              >
-                <svg
-                  class="w-12 h-12 mb-5 text-black"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
-                  ></path>
-                </svg>
-                <h3 class="text-xl font-bold mb-3 font-semibold">
-                  Увеличение продаж
-                </h3>
-                <p
-                  class="text-[#696969] text-base md:text-lg leading-relaxed font-medium"
-                >
-                  CRM-система помогает не терять ни одного клиента. Все заявки,
-                  звонки и переписки автоматически сохраняются в карточке
-                  клиента.
-                </p>
-              </div>
-
-              <!-- Item 3 -->
-              <div
-                data-aos="fade-up"
-                data-aos-duration="600"
-                data-aos-delay="200"
-              >
-                <svg
-                  class="w-12 h-12 mb-5 text-black"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="3" y1="9" x2="21" y2="9"></line>
-                  <line x1="9" y1="21" x2="9" y2="9"></line>
-                </svg>
-                <h3 class="text-xl font-bold mb-3 font-semibold">
-                  Контроль задач
-                </h3>
-                <p
-                  class="text-[#696969] text-base md:text-lg leading-relaxed font-medium"
-                >
-                  Прозрачная постановка задач с дедлайнами и чек-листами. Вы
-                  всегда видите, кто и над чем сейчас работает.
-                </p>
-              </div>
-
-              <!-- Item 4 -->
-              <div
-                data-aos="fade-up"
-                data-aos-duration="600"
-                data-aos-delay="300"
-              >
-                <svg
-                  class="w-12 h-12 mb-5 text-black"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-                <h3 class="text-xl font-bold mb-3 font-semibold">
-                  Автоматизация
-                </h3>
-                <p
-                  class="text-[#696969] text-base md:text-lg leading-relaxed font-medium"
-                >
-                  Роботы берут на себя рутину: отправляют письма, ставят задачи
-                  менеджерам, меняют статусы сделок и напоминают о звонках.
-                </p>
-              </div>
-
-              <!-- Item 5 -->
-              <div
-                data-aos="fade-up"
-                data-aos-duration="600"
-                data-aos-delay="400"
-              >
-                <svg
-                  class="w-12 h-12 mb-5 text-black"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M8.56 2.75c4.37 6.03 6.02 9.42 3.42 17.02"></path>
-                </svg>
-                <h3 class="text-xl font-bold mb-3 font-semibold">Аналитика</h3>
-                <p
-                  class="text-[#696969] text-base md:text-lg leading-relaxed font-medium"
-                >
-                  Детальные отчеты по продажам, работе сотрудников и
-                  эффективности рекламных каналов в режиме реального времени.
-                </p>
-              </div>
-
-              <!-- Item 6 -->
-              <div
-                data-aos="fade-up"
-                data-aos-duration="600"
-                data-aos-delay="500"
-              >
-                <svg
-                  class="w-12 h-12 mb-5 text-black"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                  ></polygon>
-                </svg>
-                <h3 class="text-xl font-bold mb-3 font-semibold">
-                  Безопасность
-                </h3>
-                <p
-                  class="text-[#696969] text-base md:text-lg leading-relaxed font-medium"
-                >
-                  Надежное хранение коммерческой информации с гибкой настройкой
-                  прав доступа для разных ролей сотрудников.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        id="faq"
-        class="w-full bg-black text-white relative py-20 lg:py-[200px]"
-      >
-        <div class="prime-container px-4 lg:px-8">
-          <div class="relative">
-            <h2
-              class="text-sm md:text-base lg:text-lg border-white xl:absolute top-4 mb-5 font-semibold border-t w-fit pt-2"
-            >
-              FAQ
-            </h2>
-            <p class="big-text tracking-tighter text-white mb-4 lg:mb-8">
-              Всё, что вам нужно знать о
-              <span class="italic font-normal">нашем подходе</span> и
-              <span class="italic font-normal">форматах работы</span> перед
-              стартом проекта.
-            </p>
-          </div>
-          <div class="mt-10 lg:mt-[100px] flex flex-col w-full">
-            <div
-              class="grid grid-cols-1 gap-y-10 lg:grid-cols-3 border-white/30 border-t lg:py-10 py-5"
-            >
-              <div>
-                <img src="/agency-assets/Icon1.png" class="w-9 lg:w-14" />
-              </div>
-              <div class="col-span-2">
-                <div class="">
-                  <div
-                    class="flex justify-between gap-5 items-center text-white cursor-pointer toggle-trigger"
-                  >
-                    <div>
-                      <p
-                        class="text-xl font-semibold leading-[1.4] lg:text-[28px]"
-                      >
-                        Как быстро можно приобрести лицензии Astra Linux?
-                      </p>
-                      <div
-                        class="mt-2 lg:mt-4 text-[#A6ABB3] text-sm lg:text-lg flex flex-wrap gap-2 items-center font-light"
-                      >
-                        <span>Сроки</span>
-                        <div
-                          class="w-1 h-1 lg:w-1.5 lg:h-1.5 rounded-full bg-[#CDD0D6]"
-                        ></div>
-                        <span>Поставка</span>
-                        <div
-                          class="w-1 h-1 lg:w-1.5 lg:h-1.5 rounded-full bg-[#CDD0D6]"
-                        ></div>
-                        <span>Лицензирование</span>
-                      </div>
-                    </div>
-                    <button
-                      type="button"
-                      class="faq-btn flex justify-center items-center w-12 h-12 lg:w-[60px] lg:h-[60px] aspect-square border border-white rounded-full transition-transform duration-300"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1"
-                        class="w-6 h-6 lg:w-8 lg:h-8"
-                      >
-                        <path
-                          d="M12 5V19M5 12H19"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                  <div
-                    class="toggle-content overflow-hidden transition-[max-height] duration-500 ease-in-out"
-                    style="max-height: 0px"
-                  >
-                    <p
-                      class="pt-5 lg:pt-10 border-white/30 border-t lg:text-xl font-light mb-2 lg:mb-5 lg:mt-10 mt-5"
-                    >
-                      Оформление и передача электронных ключей занимает от 1 до
-                      3 рабочих дней после оплаты счета. Физические носители
-                      (если требуются) отправляются курьерскими службами.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="grid grid-cols-1 gap-y-10 lg:grid-cols-3 border-white/30 border-t lg:py-10 py-5"
-            >
-              <div>
-                <img src="/agency-assets/Icon1.png" class="w-9 lg:w-14" />
-              </div>
-              <div class="col-span-2">
-                <div class="">
-                  <div
-                    class="flex justify-between gap-5 items-center text-white cursor-pointer toggle-trigger"
-                  >
-                    <div>
-                      <p
-                        class="text-xl font-semibold leading-[1.4] lg:text-[28px]"
-                      >
-                        Помогаете ли вы с миграцией на Astra Linux?
-                      </p>
-                      <div
-                        class="mt-2 lg:mt-4 text-[#A6ABB3] text-sm lg:text-lg flex flex-wrap gap-2 items-center font-light"
-                      >
-                        <span>Миграция</span>
-                        <div
-                          class="w-1 h-1 lg:w-1.5 lg:h-1.5 rounded-full bg-[#CDD0D6]"
-                        ></div>
-                        <span>Внедрение</span>
-                        <div
-                          class="w-1 h-1 lg:w-1.5 lg:h-1.5 rounded-full bg-[#CDD0D6]"
-                        ></div>
-                        <span>Поддержка</span>
-                      </div>
-                    </div>
-                    <button
-                      type="button"
-                      class="faq-btn flex justify-center items-center w-12 h-12 lg:w-[60px] lg:h-[60px] aspect-square border border-white rounded-full transition-transform duration-300"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1"
-                        class="w-6 h-6 lg:w-8 lg:h-8"
-                      >
-                        <path
-                          d="M12 5V19M5 12H19"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                  <div
-                    class="toggle-content overflow-hidden transition-[max-height] duration-500 ease-in-out"
-                    style="max-height: 0px"
-                  >
-                    <p
-                      class="pt-5 lg:pt-10 border-white/30 border-t lg:text-xl font-light mb-2 lg:mb-5 lg:mt-10 mt-5"
-                    >
-                      Да, мы предлагаем услуги по пилотному внедрению, аудиту
-                      инфраструктуры и полной миграции рабочих мест и серверов
-                      на отечественную ОС.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="grid grid-cols-1 gap-y-10 lg:grid-cols-3 border-white/30 border-t lg:py-10 py-5"
-            >
-              <div>
-                <img src="/agency-assets/Icon1.png" class="w-9 lg:w-14" />
-              </div>
-              <div class="col-span-2">
-                <div class="">
-                  <div
-                    class="flex justify-between gap-5 items-center text-white cursor-pointer toggle-trigger"
-                  >
-                    <div>
-                      <p
-                        class="text-xl font-semibold leading-[1.4] lg:text-[28px]"
-                      >
-                        Будут ли работать наши текущие программы на Astra Linux?
-                      </p>
-                      <div
-                        class="mt-2 lg:mt-4 text-[#A6ABB3] text-sm lg:text-lg flex flex-wrap gap-2 items-center font-light"
-                      >
-                        <span>Совместимость</span>
-                        <div
-                          class="w-1 h-1 lg:w-1.5 lg:h-1.5 rounded-full bg-[#CDD0D6]"
-                        ></div>
-                        <span>ПО</span>
-                        <div
-                          class="w-1 h-1 lg:w-1.5 lg:h-1.5 rounded-full bg-[#CDD0D6]"
-                        ></div>
-                        <span>Экосистема</span>
-                      </div>
-                    </div>
-                    <button
-                      type="button"
-                      class="faq-btn flex justify-center items-center w-12 h-12 lg:w-[60px] lg:h-[60px] aspect-square border border-white rounded-full transition-transform duration-300"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1"
-                        class="w-6 h-6 lg:w-8 lg:h-8"
-                      >
-                        <path
-                          d="M12 5V19M5 12H19"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                  <div
-                    class="toggle-content overflow-hidden transition-[max-height] duration-500 ease-in-out"
-                    style="max-height: 0px"
-                  >
-                    <p
-                      class="pt-5 lg:pt-10 border-white/30 border-t lg:text-xl font-light mb-2 lg:mb-5 lg:mt-10 mt-5"
-                    >
-                      Astra Linux поддерживает широкий спектр отечественного ПО.
-                      Для Windows-программ мы помогаем настроить среды эмуляции
-                      (Wine) или подобрать полноценные российские аналоги.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="grid grid-cols-1 gap-y-10 lg:grid-cols-3 border-white/30 border-t lg:py-10 py-5"
-            >
-              <div>
-                <img src="/agency-assets/Icon1.png" class="w-9 lg:w-14" />
-              </div>
-              <div class="col-span-2">
-                <div class="">
-                  <div
-                    class="flex justify-between gap-5 items-center text-white cursor-pointer toggle-trigger"
-                  >
-                    <div>
-                      <p
-                        class="text-xl font-semibold leading-[1.4] lg:text-[28px]"
-                      >
-                        Как происходит процесс оплаты и оформления?
-                      </p>
-                      <div
-                        class="mt-2 lg:mt-4 text-[#A6ABB3] text-sm lg:text-lg flex flex-wrap gap-2 items-center font-light"
-                      >
-                        <span>Оплата</span>
-                        <div
-                          class="w-1 h-1 lg:w-1.5 lg:h-1.5 rounded-full bg-[#CDD0D6]"
-                        ></div>
-                        <span>Договор</span>
-                        <div
-                          class="w-1 h-1 lg:w-1.5 lg:h-1.5 rounded-full bg-[#CDD0D6]"
-                        ></div>
-                        <span>Этапы</span>
-                      </div>
-                    </div>
-                    <button
-                      type="button"
-                      class="faq-btn flex justify-center items-center w-12 h-12 lg:w-[60px] lg:h-[60px] aspect-square border border-white rounded-full transition-transform duration-300"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1"
-                        class="w-6 h-6 lg:w-8 lg:h-8"
-                      >
-                        <path
-                          d="M12 5V19M5 12H19"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                  <div
-                    class="toggle-content overflow-hidden transition-[max-height] duration-500 ease-in-out"
-                    style="max-height: 0px"
-                  >
-                    <p
-                      class="pt-5 lg:pt-10 border-white/30 border-t lg:text-xl font-light mb-2 lg:mb-5 lg:mt-10 mt-5"
-                    >
-                      Работаем с юрлицами по договору безналичного расчета. Все
-                      закрывающие документы отправляем через ЭДО или Почтой
-                      России.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="relative border-t border-[#CDD0D6]">
+      <section class="relative border-[#CDD0D6]">
         <img
           src="/seo-assets/bg-vectors.png"
           class="absolute inset-0 w-full h-full object-cover object-center z-[0] pointer-events-none"
@@ -1267,11 +416,11 @@
             <p
               class="mt-5 lg:mt-10 mb-5 text-20 text-black leading-[1.6] font-medium"
             >
-              Заполните бриф, и наша команда свяжется с вами в ближайшее время
+              Заполните заявку, и наша команда свяжется с вами в ближайшее время
               для обсуждения деталей проекта.
             </p>
             <button data-popup="project" class="black-btn mt-5">
-              Отправить бриф
+              Отправить заявку
             </button>
           </div>
           <div
@@ -1459,3 +608,8 @@
     </script>
   </body>
 </html>
+
+
+
+
+
