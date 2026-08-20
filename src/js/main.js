@@ -124,48 +124,48 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    submitBtn?.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        const nameInput = formSection.querySelector('input[placeholder="РРІР°РЅРѕРІ РРІР°РЅ"]');
-        const contactInput = formSection.querySelector('input[placeholder="РџРѕС‡С‚Р°, С‚РµР»РµС„РѕРЅ РёР»Рё РјРµСЃСЃРµРЅРґР¶РµСЂ"]');
-        const projectTextarea = formSection.querySelector('textarea');
-        const consentCheckbox = formSection.querySelector('#project-consent');
-
-        [nameInput, contactInput, projectTextarea].forEach(el => el.classList.remove('border-red-500'));
-        consentCheckbox.classList.remove('outline-red-500', 'ring-2', 'ring-red-500');
-
-        let hasError = false;
-
-        if (!nameInput.value.trim()) {
-            nameInput.classList.add('border-red-500');
-            hasError = true;
-        }
-        if (!contactInput.value.trim()) {
-            contactInput.classList.add('border-red-500');
-            hasError = true;
-        }
-        if (!projectTextarea.value.trim()) {
-            projectTextarea.classList.add('border-red-500');
-            hasError = true;
-        }
-        if (!consentCheckbox.checked) {
-            consentCheckbox.classList.add('outline-red-500', 'ring-2', 'ring-red-500');
-            hasError = true;
-        }
-
-        if (hasError) return;
-
-        // Simulate submission
-        const isSuccess = Math.random() > 0.3;
-
-        nameInput.value = '';
-        contactInput.value = '';
-        projectTextarea.value = '';
-        consentCheckbox.checked = false;
-
-        showSection(isSuccess ? successSection : errorSection);
-    });
+//     submitBtn?.addEventListener('click', (e) => {
+//         e.preventDefault();
+// 
+//         const nameInput = formSection.querySelector('input[placeholder="РРІР°РЅРѕРІ РРІР°РЅ"]');
+//         const contactInput = formSection.querySelector('input[placeholder="РџРѕС‡С‚Р°, С‚РµР»РµС„РѕРЅ РёР»Рё РјРµСЃСЃРµРЅРґР¶РµСЂ"]');
+//         const projectTextarea = formSection.querySelector('textarea');
+//         const consentCheckbox = formSection.querySelector('#project-consent');
+// 
+//         [nameInput, contactInput, projectTextarea].forEach(el => el.classList.remove('border-red-500'));
+//         consentCheckbox.classList.remove('outline-red-500', 'ring-2', 'ring-red-500');
+// 
+//         let hasError = false;
+// 
+//         if (!nameInput.value.trim()) {
+//             nameInput.classList.add('border-red-500');
+//             hasError = true;
+//         }
+//         if (!contactInput.value.trim()) {
+//             contactInput.classList.add('border-red-500');
+//             hasError = true;
+//         }
+//         if (!projectTextarea.value.trim()) {
+//             projectTextarea.classList.add('border-red-500');
+//             hasError = true;
+//         }
+//         if (!consentCheckbox.checked) {
+//             consentCheckbox.classList.add('outline-red-500', 'ring-2', 'ring-red-500');
+//             hasError = true;
+//         }
+// 
+//         if (hasError) return;
+// 
+//         // Simulate submission
+//         const isSuccess = Math.random() > 0.3;
+// 
+//         nameInput.value = '';
+//         contactInput.value = '';
+//         projectTextarea.value = '';
+//         consentCheckbox.checked = false;
+// 
+//         showSection(isSuccess ? successSection : errorSection);
+//     });
 
     errorSection?.querySelector('button')?.addEventListener('click', () => {
         showSection(formSection);
