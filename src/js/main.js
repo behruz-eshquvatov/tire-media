@@ -94,12 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 300);
     };
 
-    // вњ… All open buttons
+    // ✅ All open buttons
     document.querySelectorAll('[data-popup="project"]').forEach(btn => {
         btn.addEventListener('click', openPopup);
     });
 
-    // вќЊ Remove this single button logic
+    // ❌ Remove this single button logic
     // const openBtn = document.getElementById('open-project-popup');
     // openBtn?.addEventListener('click', openPopup);
 
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //         e.preventDefault();
 // 
 //         const nameInput = formSection.querySelector('input[placeholder="РРІР°РЅРѕРІ РРІР°РЅ"]');
-//         const contactInput = formSection.querySelector('input[placeholder="РџРѕС‡С‚Р°, С‚РµР»РµС„РѕРЅ РёР»Рё РјРµСЃСЃРµРЅРґР¶РµСЂ"]');
+//         const contactInput = formSection.querySelector('input[placeholder="Почта, телефон или мессенджер"]');
 //         const projectTextarea = formSection.querySelector('textarea');
 //         const consentCheckbox = formSection.querySelector('#project-consent');
 // 
@@ -195,8 +195,8 @@ document.addEventListener('DOMContentLoaded', () => {
             overlay.classList.remove('opacity-0');
         }, 10);
 
-        menuText.textContent = 'Р—Р°РєСЂС‹С‚СЊ';
-        menuIcon.src = '/main-assets/Close.svg'; // РёР»Рё Р·Р°РјРµРЅРёС‚Рµ РЅР° РїРѕРґС…РѕРґСЏС‰СѓСЋ РёРєРѕРЅРєСѓ
+        menuText.textContent = 'Закрыть';
+        menuIcon.src = '/main-assets/Close.svg'; // или замените на подходящую иконку
         isOpen = true;
     };
 
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
             menuWrapper.classList.add('hidden');
         }, 300);
 
-        menuText.textContent = 'РњРµРЅСЋ';
+        menuText.textContent = 'Меню';
         menuIcon.src = '/main-assets/Menu.svg';
         isOpen = false;
     };
@@ -220,13 +220,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 const header = document.querySelector('.sticky-header');
 let lastScroll = window.scrollY;
-let isPopupOpen = false; // <== РќРѕРІС‹Р№ С„Р»Р°Рі
+let isPopupOpen = false; // <== Новый флаг
 
 function handleHeaderScroll() {
     const currentScroll = window.scrollY;
     const isDesktop = window.innerWidth >= 1280;
 
-    if (isPopupOpen) return; // <== РџСЂРё РѕС‚РєСЂС‹С‚РѕРј РїРѕРїР°РїРµ вЂ” РЅРёС‡РµРіРѕ РЅРµ РґРµР»Р°РµРј
+    if (isPopupOpen) return; // <== При открытом попапе — ничего не делаем
 
     if (isDesktop) {
         if (currentScroll > lastScroll && currentScroll > 100) {
@@ -252,7 +252,7 @@ dropdowns.forEach(wrapper => {
     const content = wrapper.querySelector('.dropdown-content');
 
     wrapper.addEventListener('mouseenter', () => {
-        // Р—Р°РєСЂС‹РІР°РµРј РІСЃРµ, РєСЂРѕРјРµ С‚РµРєСѓС‰РµРіРѕ
+        // Закрываем все, кроме текущего
         dropdowns.forEach(w => {
             if (w !== wrapper) {
                 w.classList.remove('open');
@@ -273,7 +273,7 @@ dropdowns.forEach(wrapper => {
     });
 });
 
-// вќЊ РЈРґР°Р»СЏРµРј РєР»РёРє РІРЅРµ, С‚.Рє. С‚РµРїРµСЂСЊ РІСЃС‘ РЅР° hover
+// ❌ Удаляем клик вне, т.к. теперь всё на hover
 // document.addEventListener('click', ...);
 
 //HEADER ENDS
@@ -332,7 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
 
             const name = form.querySelector('input[placeholder*="РРІР°РЅРѕРІ РРІР°РЅ"]').value.trim();
-            const contact = form.querySelector('input[placeholder*="РџРѕС‡С‚Р°"]').value.trim();
+            const contact = form.querySelector('input[placeholder*="Почта"]').value.trim();
             const description = form.querySelector('textarea').value.trim();
             const consent = form.querySelector('#consent').checked;
 
@@ -349,7 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // РћС‡РёСЃС‚РєР° С„РѕСЂРјС‹
+            // Очистка формы
             form.reset();
             if (hasDirections) {
                 directions.forEach(btn => btn.classList.remove('bg-black', 'text-white'));
@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (successPopup) successPopup.classList.remove('hidden');
         });
 
-        // РџСЂРё РєР»РёРєРµ РїРѕ РєРЅРѕРїРєРµ РІС‹Р±РѕСЂР° РЅР°РїСЂР°РІР»РµРЅРёСЏ вЂ” РІС‹РґРµР»СЏРµРј РµС‘
+        // При клике по кнопке выбора направления — выделяем её
         form.querySelectorAll('button[type="button"]').forEach(btn => {
             btn.addEventListener('click', () => {
                 btn.classList.toggle('bg-black');
@@ -394,7 +394,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // AOS ANIMATIONS ENDS
 
 
-// USERS РћРўР—Р«Р’Рђ STARTS
+// USERS ОТЗЫВА STARTS
 new Swiper('.testimonial-swiper', {
     loop: true,
     slidesPerView: 1,
@@ -408,7 +408,7 @@ new Swiper('.testimonial-swiper', {
         prevEl: '.swiper-button-prev',
     },
 });
-// USERS РћРўР—Р«Р’Рђ ENDS
+// USERS ОТЗЫВА ENDS
 
 // Taiwlind Slider/TEAM STARTS
 const sliders = document.querySelectorAll('.overflow-x-auto');
@@ -487,7 +487,7 @@ Fancybox.bind('[data-fancybox="testimonials"]', {
         } else {
             content.classList.remove('max-h-0');
             content.classList.add('max-h-[2000px]');
-            btn.textContent = 'в€’';
+            btn.textContent = '−';
         }
     });
 });
@@ -507,7 +507,7 @@ awards.forEach((award) => {
             item.classList.toggle("hidden");
         });
 
-        btn.textContent = isHidden ? "РЎРєСЂС‹С‚СЊ РЅР°РіСЂР°РґС‹" : "Р’СЃРµ РЅР°РіСЂР°РґС‹";
+        btn.textContent = isHidden ? "Скрыть награды" : "Все награды";
     });
 });
 
@@ -555,7 +555,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const error = document.getElementById("vacancy-popup-error");
 
     const nameInput = form.querySelector('input[placeholder*="РРІР°РЅРѕРІ РРІР°РЅ"]');
-    const contactInput = form.querySelector('input[placeholder*="РџРѕС‡С‚Р°"]');
+    const contactInput = form.querySelector('input[placeholder*="Почта"]');
     const textInput = form.querySelector('textarea');
     const fileInput = form.querySelector('input[type="file"]');
     const checkInput = document.getElementById("vacancy-consent");
@@ -566,7 +566,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     fileInput.addEventListener("change", () => {
         if (fileInput.files.length > 0) {
             const file = fileInput.files[0];
-            fileNameDisplay.textContent = `Р’С‹ РІС‹Р±СЂР°Р»Рё С„Р°Р№Р»: ${file.name.slice(0, 15)}....`;
+            fileNameDisplay.textContent = `Вы выбрали файл: ${file.name.slice(0, 15)}....`;
         } else {
             fileNameDisplay.textContent = "";
         }
@@ -641,7 +641,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             contactInput.classList.remove("border-red-500");
         }
 
-        // Validate "Рћ СЃРµР±Рµ"
+        // Validate "О себе"
         if (textInput.value.trim() === "") {
             textInput.classList.add("border-red-500");
             hasError = true;
@@ -684,7 +684,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         .querySelectorAll("#vacancy-popup-success button, #vacancy-popup-error button")
         .forEach((btn) => {
             btn.addEventListener("click", () => {
-                const isRetry = btn.textContent.includes("РџРѕРІС‚РѕСЂРёС‚СЊ");
+                const isRetry = btn.textContent.includes("Повторить");
 
                 if (isRetry) {
                     // Show form again
