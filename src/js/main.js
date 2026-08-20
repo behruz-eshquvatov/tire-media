@@ -792,6 +792,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const forms = document.querySelectorAll('form');
     
@@ -799,13 +800,22 @@ document.addEventListener('DOMContentLoaded', () => {
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             
+            // Clear previous errors
+            form.querySelectorAll('.border-red-500').forEach(el => el.classList.remove('border-red-500'));
+            form.querySelectorAll('.error-text').forEach(el => el.remove());
+            
             const inputs = form.querySelectorAll('input, textarea, select');
             let data = {
+                form_type: '',
                 name: '',
                 contact: '',
                 company: '',
+                sphere: '',
+                employees: '',
                 message: ''
             };
+            
+            let inputMap = {}; // to map field names to DOM elements for errors
             
             inputs.forEach(input => {
                 const placeholder = (input.getAttribute('placeholder') || '').toLowerCase();
@@ -818,13 +828,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 if (text.includes('имя') || text.includes('зовут') || text.includes('лицо')) {
                     data.name = value;
+                    inputMap['name'] = input;
                 } else if (text.includes('телефон') || text.includes('почта') || text.includes('связаться') || input.type === 'tel') {
                     data.contact = value;
-                } else if (text.includes('компани') || text.includes('организац')) {
+                    inputMap['contact'] = input;
+                } else if (text.includes('компан') || text.includes('организац')) {
                     data.company = value;
+                    inputMap['company'] = input;
+                } else if (text.includes('сфера')) {
+                    data.sphere = value;
+                    inputMap['sphere'] = input;
+                } else if (text.includes('сотрудник')) {
+                    data.employees = value;
+                    inputMap['employees'] = input;
                 } else if (text.includes('проект') || text.includes('задач') || input.tagName === 'TEXTAREA') {
                     if (data.message) data.message += "\n" + value;
                     else data.message = value;
+                    inputMap['message'] = input;
                 } else {
                     const fieldName = (labelElement && labelElement.tagName === 'LABEL') ? labelElement.textContent : placeholder;
                     const appendText = fieldName ? fieldName + ': ' + value : value;
@@ -832,6 +852,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     else data.message = appendText;
                 }
             });
+            
+            // Determine form type based on fields
+            if (data.sphere || data.employees || data.company) {
+                data.form_type = 'Интеграция';
+            } else {
+                data.form_type = 'Лицензии';
+            }
             
             const submitBtn = form.querySelector('button[type="submit"]');
             const originalText = submitBtn ? submitBtn.innerText : 'Отправить';
@@ -846,13 +873,48 @@ document.addEventListener('DOMContentLoaded', () => {
                     body: JSON.stringify(data)
                 });
                 
+                const result = await response.json();
+                
                 if (response.ok) {
-                    alert('Заявка успешно отправлена!');
                     form.reset();
-                    const closeBtn = form.closest('[id$="-popup"]')?.querySelector('[id$="-close"]');
-                    if (closeBtn) closeBtn.click();
+                    // Show popup success
+                    const successSection = document.getElementById('project-popup-success');
+                    const formSection = form.closest('#project-popup form') ? document.querySelector('#project-popup form') : form;
+                    const errorSection = document.getElementById('project-popup-error');
+                    
+                    if (successSection && form.closest('#project-popup')) {
+                        formSection.classList.add('hidden');
+                        formSection.classList.remove('flex');
+                        if(errorSection) { errorSection.classList.add('hidden'); errorSection.classList.remove('flex'); }
+                        successSection.classList.remove('hidden');
+                        successSection.classList.add('flex');
+                    } else {
+                        alert('Заявка успешно отправлена!');
+                    }
                 } else {
-                    alert('Ошибка отправки. Пожалуйста, попробуйте позже.');
+                    if (result.errors) {
+                        for (const [key, msg] of Object.entries(result.errors)) {
+                            const el = inputMap[key];
+                            if (el) {
+                                el.classList.add('border-red-500');
+                                const err = document.createElement('span');
+                                err.className = 'text-red-500 text-sm mt-1 error-text';
+                                err.innerText = msg;
+                                el.parentNode.insertBefore(err, el.nextSibling);
+                            }
+                        }
+                    } else {
+                        // generic error popup
+                        const errorSection = document.getElementById('project-popup-error');
+                        const formSection = document.querySelector('#project-popup form');
+                        if (errorSection && form.closest('#project-popup')) {
+                            if(formSection) { formSection.classList.add('hidden'); formSection.classList.remove('flex'); }
+                            errorSection.classList.remove('hidden');
+                            errorSection.classList.add('flex');
+                        } else {
+                            alert('Ошибка отправки: ' + (result.message || 'Попробуйте позже.'));
+                        }
+                    }
                 }
             } catch (err) {
                 console.error(err);
