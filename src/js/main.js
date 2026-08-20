@@ -877,20 +877,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 if (response.ok) {
                     form.reset();
-                    // Show popup success
-                    const successSection = document.getElementById('project-popup-success');
-                    const formSection = form.closest('#project-popup form') ? document.querySelector('#project-popup form') : form;
-                    const errorSection = document.getElementById('project-popup-error');
+                    const closeBtn = form.closest('[id$="-popup"]')?.querySelector('[id$="-close"]');
+                    if (closeBtn) closeBtn.click();
                     
-                    if (successSection && form.closest('#project-popup')) {
-                        formSection.classList.add('hidden');
-                        formSection.classList.remove('flex');
-                        if(errorSection) { errorSection.classList.add('hidden'); errorSection.classList.remove('flex'); }
-                        successSection.classList.remove('hidden');
-                        successSection.classList.add('flex');
-                    } else {
-                        alert('Заявка успешно отправлена!');
-                    }
+                    showSmallPopup('Успех!', 'Заявка оформлена успешно! В ближайшее время наш менеджер свяжется с вами.');
                 } else {
                     if (result.errors) {
                         for (const [key, msg] of Object.entries(result.errors)) {
@@ -904,16 +894,10 @@ document.addEventListener('DOMContentLoaded', () => {
                             }
                         }
                     } else {
-                        // generic error popup
-                        const errorSection = document.getElementById('project-popup-error');
-                        const formSection = document.querySelector('#project-popup form');
-                        if (errorSection && form.closest('#project-popup')) {
-                            if(formSection) { formSection.classList.add('hidden'); formSection.classList.remove('flex'); }
-                            errorSection.classList.remove('hidden');
-                            errorSection.classList.add('flex');
-                        } else {
-                            alert('Ошибка отправки: ' + (result.message || 'Попробуйте позже.'));
-                        }
+                        const closeBtn = form.closest('[id$="-popup"]')?.querySelector('[id$="-close"]');
+                        if (closeBtn) closeBtn.click();
+                        
+                        showSmallPopup('Что-то пошло не так!', result.message || 'Просим извинения за неудобства. Попробуйте еще раз позже.');
                     }
                 }
             } catch (err) {
@@ -925,3 +909,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+function showSmallPopup(title, text) {
+    let popup = document.getElementById('dynamic-small-popup');
+    if (!popup) {
+        popup = document.createElement('div');
+        popup.id = 'dynamic-small-popup';
+        popup.className = 'fixed inset-0 z-[100] flex items-center justify-center opacity-0 transition-opacity duration-300 pointer-events-none';
+        
+        popup.innerHTML = `
+            <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="dynamic-small-overlay"></div>
+            <div class="bg-white rounded-3xl p-8 lg:p-12 relative z-10 w-[90%] max-w-[450px] text-center shadow-2xl transform scale-95 transition-transform duration-300" id="dynamic-small-modal">
+                <button class="absolute top-4 right-4 text-gray-500 hover:text-black transition" id="dynamic-small-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+                <h3 class="font-semibold text-2xl lg:text-[28px] mb-4 leading-tight"></h3>
+                <p class="text-[#696969] text-base lg:text-lg mb-8 leading-relaxed"></p>
+                <button class="px-10 py-4 font-semibold text-white bg-black rounded-full hover:bg-transparent hover:text-black border border-black transition-colors duration-300 w-full" id="dynamic-small-btn">Хорошо</button>
+            </div>
+        `;
+        document.body.appendChild(popup);
+        
+        const closeFn = () => {
+            popup.classList.remove('opacity-100', 'pointer-events-auto');
+            popup.classList.add('opacity-0', 'pointer-events-none');
+            popup.querySelector('#dynamic-small-modal').classList.remove('scale-100');
+            popup.querySelector('#dynamic-small-modal').classList.add('scale-95');
+        };
+        
+        popup.querySelector('#dynamic-small-overlay').addEventListener('click', closeFn);
+        popup.querySelector('#dynamic-small-close').addEventListener('click', closeFn);
+        popup.querySelector('#dynamic-small-btn').addEventListener('click', closeFn);
+    }
+    
+    popup.querySelector('h3').innerText = title;
+    popup.querySelector('p').innerText = text;
+    
+    // Animate in
+    setTimeout(() => {
+        popup.classList.remove('opacity-0', 'pointer-events-none');
+        popup.classList.add('opacity-100', 'pointer-events-auto');
+        popup.querySelector('#dynamic-small-modal').classList.remove('scale-95');
+        popup.querySelector('#dynamic-small-modal').classList.add('scale-100');
+    }, 10);
+}
